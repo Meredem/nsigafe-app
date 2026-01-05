@@ -25,6 +25,31 @@ Une application Next.js pour le service de livraison de colis N'Sigafé.
 
 3. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
+## Déploiement sur Netlify (GRATUIT)
+
+### Déploiement Automatique
+
+1. **Connectez-vous à Netlify** : Allez sur [netlify.com](https://netlify.com) et connectez-vous avec GitHub
+
+2. **Importez le projet** :
+   - Cliquez sur "Add new site" → "Import an existing project"
+   - Choisissez GitHub et autorisez l'accès
+   - Sélectionnez votre repository `Meredem/nsigafe-app`
+
+3. **Configuration** :
+   - **Branch to deploy** : `master`
+   - **Build command** : `npm run build`
+   - **Publish directory** : `.next` (automatique avec netlify.toml)
+
+4. **Déployez** : Cliquez sur "Deploy site"
+
+### Avantages de Netlify
+- ✅ **100% gratuit** pour les projets personnels
+- ✅ Déploiement automatique à chaque push
+- ✅ Formulaires intégrés (pas besoin de configuration supplémentaire)
+- ✅ CDN mondial rapide
+- ✅ HTTPS automatique
+
 ## Déploiement sur Vercel
 
 ### Déploiement Automatique (Recommandé)
@@ -50,6 +75,33 @@ Si vous préférez déployer manuellement :
 ```bash
 npm run build
 npm run start
+```
+
+## Autres Options de Déploiement Gratuit
+
+### 🚀 Render
+- **Site** : [render.com](https://render.com)
+- **Avantages** : 750 heures gratuites/mois, bases de données gratuites
+- **Idéal pour** : Applications full-stack
+
+### 🚂 Railway
+- **Site** : [railway.app](https://railway.app)
+- **Avantages** : 512MB RAM gratuit, bases de données
+- **Idéal pour** : Applications avec base de données
+
+### 📦 Netlify Functions (Alternative)
+Si vous voulez garder Vercel mais éviter les frais :
+- Utilisez le plan Hobby ($7/mois) pour 1 projet
+- Ou attendez les promotions étudiantes
+
+## Déploiement Local (pour développement)
+
+Si vous voulez juste montrer l'app à quelqu'un :
+
+```bash
+# Sur votre machine
+npm run dev
+# Puis partagez l'URL localhost:3000 via ngrok ou similar
 ```
 
 ## Technologies Utilisées
