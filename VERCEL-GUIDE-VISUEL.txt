@@ -1,0 +1,136 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║          🚀 DÉPLOIEMENT VERCEL - GUIDE ULTRA SIMPLE 🚀        ║
+║                                                                ║
+║                  (Seulement 3 clics!)                          ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+VOTRE CODE EST SUR GITHUB ✓
+────────────────────────────────────────────────────────────────
+https://github.com/Meredem/nsigafe-app
+C'est bon! Ne touchez pas!
+
+
+ÉTAPE 1️⃣ : ALLEZ SUR VERCEL
+────────────────────────────────────────────────────────────────
+
+Ouvrez ce lien dans votre navigateur:
+
+    👉 https://vercel.com
+
+C'est tout!
+
+
+ÉTAPE 2️⃣ : CRÉER UN COMPTE
+────────────────────────────────────────────────────────────────
+
+Si vous n'avez pas de compte:
+
+    1. Cliquez sur "SIGN UP" (haut à droite)
+    2. Cliquez sur "Continue with GitHub"
+    3. Confirmez avec votre compte GitHub (Meredem)
+    4. C'est tout!
+
+Si vous AVEZ déjà un compte:
+    → Allez à l'étape 3
+
+
+ÉTAPE 3️⃣ : IMPORTER LE REPOSITORY
+────────────────────────────────────────────────────────────────
+
+Une fois connecté sur vercel.com:
+
+    1. Cliquez sur "Add New..." (en haut à gauche)
+    
+    2. Sélectionnez "Project"
+    
+    3. Cherchez "nsigafe-app" dans la liste
+    
+    4. Cliquez sur "Import"
+
+
+ÉTAPE 4️⃣ : VÉRIFIER LES PARAMÈTRES
+────────────────────────────────────────────────────────────────
+
+Vercel vous montrera des paramètres:
+
+    Framework Preset: ✓ Next.js (déjà bon)
+    Root Directory:   ✓ ./ (déjà bon)
+    
+    NE CHANGEZ RIEN! 
+    Cliquez juste sur "Deploy"
+
+
+ÉTAPE 5️⃣ : ATTENDRE LE DÉPLOIEMENT
+────────────────────────────────────────────────────────────────
+
+Vercel va faire le build et le déploiement.
+
+⏳ Ça prend 3-5 minutes...
+
+Vous verrez:
+    ✓ Building...
+    ✓ Running...  
+    ✓ Deployment Complete!
+
+Quand vous voyez "Deployment Complete!" = C'EST FINI! 🎉
+
+
+ÉTAPE 6️⃣ : VOTRE LIEN EST PRÊT!
+────────────────────────────────────────────────────────────────
+
+Une fois terminez, Vercel vous donnera un lien:
+
+    https://nsigafe-app.vercel.app
+
+OU un lien temporaire comme:
+    https://nsigafe-app-xxxxx.vercel.app
+
+COPIEZ-LE ET PARTAGEZ-LE PARTOUT! 🌍
+
+
+════════════════════════════════════════════════════════════════
+
+BESOIN D'AIDE?
+════════════════════════════════════════════════════════════════
+
+Q: Je ne vois pas "nsigafe-app" dans la liste?
+R: Cliquez sur "Select a Git Repository" et cherchez-le
+
+Q: Ça dit "Build Failed"?
+R: Attendez 30 secondes et rafraîchissez la page
+
+Q: Je ne vois toujours rien?
+R: Essayez de vous déconnecter/reconnecter sur Vercel
+
+Q: Ça prend plus de 10 minutes?
+R: Le build a un problème, contactez GitHub pour vérifier
+
+
+════════════════════════════════════════════════════════════════
+
+⚡ RÉSUMÉ (ULTRA COURT):
+
+1. Allez sur vercel.com
+2. Connectez-vous avec GitHub
+3. Cliquez "Add New" → "Project"
+4. Sélectionnez "nsigafe-app"
+5. Cliquez "Deploy"
+6. Attendez 5 min
+7. Partagez le lien! 🎉
+
+════════════════════════════════════════════════════════════════
+
+LIENS IMPORTANTS:
+
+📱 Vercel:          https://vercel.com
+🐙 Votre GitHub:    https://github.com/Meredem/nsigafe-app
+🌐 Votre site:      https://nsigafe-app.vercel.app
+
+════════════════════════════════════════════════════════════════
+
+Créé pour Bouba & Mane Foot ⚽
+Janvier 2026
+
+════════════════════════════════════════════════════════════════
