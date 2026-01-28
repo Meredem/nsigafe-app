@@ -1,0 +1,21 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FFF3E0"/>
+  <rect x="50" y="50" width="700" height="500" fill="#FFFFFF" stroke="#FF9800" stroke-width="3"/>
+  <!-- Haltères -->
+  <rect x="100" y="150" width="20" height="100" fill="#795548"/>
+  <circle cx="110" cy="140" r="15" fill="#424242"/>
+  <circle cx="110" cy="270" r="15" fill="#424242"/>
+  <rect x="200" y="150" width="20" height="100" fill="#795548"/>
+  <circle cx="210" cy="140" r="15" fill="#424242"/>
+  <circle cx="210" cy="270" r="15" fill="#424242"/>
+  <!-- Vélo -->
+  <circle cx="350" cy="200" r="40" fill="none" stroke="#FF9800" stroke-width="8"/>
+  <circle cx="350" cy="200" r="20" fill="#FFFFFF"/>
+  <rect x="340" y="180" width="20" height="40" fill="#FF9800"/>
+  <!-- Banc de musculation -->
+  <rect x="500" y="200" width="150" height="30" fill="#795548"/>
+  <rect x="520" y="170" width="20" height="60" fill="#424242"/>
+  <rect x="610" y="170" width="20" height="60" fill="#424242"/>
+  <text x="400" y="580" text-anchor="middle" fill="#E65100" font-size="24" font-family="Arial">Salle de Musculation</text>
+  <text x="400" y="20" text-anchor="middle" fill="#E65100" font-size="18" font-family="Arial">Équipements Professionnels</text>
+</svg>

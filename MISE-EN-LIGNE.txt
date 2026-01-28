@@ -1,0 +1,100 @@
+🚀 **BOUBA & MANE FOOT - METTRE EN LIGNE EN 5 MINUTES**
+
+=====================================================
+
+**ÉTAPE 1: Préparez votre Git**
+
+Ouvrez PowerShell dans le dossier du projet et exécutez:
+
+```powershell
+cd "c:\Users\aboub\Downloads\nsigafe-app"
+git init
+git config user.email "contact@bouba-mane-foot.fr"
+git config user.name "Bouba Mane Foot"
+git add .
+git commit -m "Initial commit - Bouba & Mane Foot"
+```
+
+=====================================================
+
+**ÉTAPE 2: Créez un compte GitHub**
+
+1. Allez sur https://github.com
+2. Cliquez "Sign up"
+3. Créez un compte avec votre email
+4. Vérifiez votre email
+
+=====================================================
+
+**ÉTAPE 3: Poussez votre code sur GitHub**
+
+Après avoir créé un repository sur GitHub (nomme-le "nsigafe-app"), exécutez:
+
+```powershell
+git remote add origin https://github.com/VOTRE_USERNAME/nsigafe-app.git
+git branch -M main
+git push -u origin main
+```
+
+=====================================================
+
+**ÉTAPE 4: Déployez sur VERCEL (5 minutes)**
+
+1. Allez sur https://vercel.com
+2. Cliquez "Sign Up" 
+3. Connectez-vous avec votre compte GitHub
+4. Cliquez "Add New..." → "Project"
+5. Importez le repository "nsigafe-app"
+6. Cliquez "Deploy"
+7. ATTENDEZ 2-3 MINUTES...
+8. Votre site est EN LIGNE! 🎉
+
+**Votre URL**: https://nsigafe-app.vercel.app
+
+=====================================================
+
+**ÉTAPE 5 (OPTIONNEL): Achetez un domaine personnalisé**
+
+Domains populaires:
+- boubamanefoot.com (~15€/an)
+- boubamanefoot.gn (~100€/an - domaine Guinée)
+- nsigafe.com (~12€/an)
+
+Achetez sur: Namecheap, GoDaddy, ou OVH
+Puis: Settings Vercel → Domains → Ajouter votre domaine
+
+=====================================================
+
+**VOILÀ! VOTRE SITE EST EN LIGNE!** 🚀
+
+Partagez le lien avec tout le monde:
+https://nsigafe-app.vercel.app
+
+=====================================================
+
+**QUESTIONS FRÉQUENTES:**
+
+Q: Combien ça coûte?
+A: GRATUIT! Vercel et GitHub sont 100% gratuits.
+
+Q: Que faire si j'ai des erreurs?
+A: Ouvrez la console Vercel pour voir les logs d'erreur.
+
+Q: Comment mettre à jour le site?
+A: Modifiez vos fichiers localement, puis:
+   git add .
+   git commit -m "Update"
+   git push
+   Vercel se mettra à jour automatiquement!
+
+Q: Puis-je utiliser mon propre domaine?
+A: OUI! Dans Vercel → Settings → Domains
+
+=====================================================
+
+Besoin d'aide? Consultez:
+- https://vercel.com/docs
+- https://nextjs.org/docs
+- https://docs.github.com
+
+BON COURAGE! ⚽✨

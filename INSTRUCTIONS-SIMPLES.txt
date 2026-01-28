@@ -1,0 +1,188 @@
+🎯 METTRE VOTRE SITE EN LIGNE - GUIDE SUPER SIMPLE
+═══════════════════════════════════════════════════════════════
+
+Vous avez un site MAGNIFIQUE et vous voulez que tout le monde 
+le voit? Suivez ces étapes SIMPLES!
+
+DURÉE: 15 minutes
+COÛT: 0€ (GRATUIT!)
+DIFFICULTÉ: ⭐ (Très facile!)
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 1: Créer un compte GITHUB (5 min)
+═══════════════════════════════════════════════════════════════
+
+GitHub = Le lieu où on stocke les codes
+
+1. Allez sur: github.com
+2. Cliquez "Sign up"
+3. Entrez votre email (ex: aboub@gmail.com)
+4. Créez un mot de passe
+5. Choisissez un pseudonyme (ex: AboubBouba)
+6. Confirmez par email
+7. ✅ FAIT!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 2: Créer votre DÉPÔT (repository) (3 min)
+═══════════════════════════════════════════════════════════════
+
+Un dépôt = Une place pour vos fichiers du site
+
+1. Sur GitHub, cliquez "+" en haut à droite
+2. Cliquez "New repository"
+3. Nom: nsigafe-app
+4. Description: Bouba & Mane Foot
+5. Cliquez "Create repository"
+6. ✅ FAIT!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 3: Envoyer votre code (3 min)
+═══════════════════════════════════════════════════════════════
+
+Envoi = "Pousser" vos fichiers vers GitHub
+
+Ouvrez PowerShell (l'application noire sur Windows):
+
+1. Appuyez sur touche Windows
+2. Tapez "PowerShell"
+3. Ouvrez-la
+4. Tapez ceci (puis appuyez Entrée):
+
+cd "c:\Users\aboub\Downloads\nsigafe-app"
+
+5. Tapez ceci:
+
+git init
+
+6. Puis ceci:
+
+git config user.email "contact@bouba-mane-foot.fr"
+
+7. Puis:
+
+git config user.name "Bouba Mane Foot"
+
+8. Puis:
+
+git add .
+
+9. Puis:
+
+git commit -m "Mon site Bouba & Mane Foot"
+
+10. Puis ceci (REMPLACEZ MON_USERNAME par votre pseudo GitHub):
+
+git remote add origin https://github.com/MON_USERNAME/nsigafe-app.git
+
+11. Puis:
+
+git branch -M main
+
+12. Enfin:
+
+git push -u origin main
+
+13. ✅ FAIT! Votre code est sur GitHub!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 4: Mettre en ligne sur VERCEL (3 min)
+═══════════════════════════════════════════════════════════════
+
+Vercel = Le service qui rend votre site visible à tout le monde
+
+1. Allez sur: vercel.com
+2. Cliquez "Sign Up"
+3. Cliquez "Continue with GitHub"
+4. Autorisez Vercel
+5. Cliquez "New Project"
+6. Trouvez "nsigafe-app" dans la liste
+7. Cliquez sur "nsigafe-app"
+8. Cliquez "Import"
+9. Attendez 2-3 minutes...
+10. Vous verrez "Congratulations!" 🎉
+11. Cliquez le lien pour voir votre site!
+
+✅ VOTRE SITE EST EN LIGNE!
+
+═══════════════════════════════════════════════════════════════
+
+🎉 RÉSULTAT
+═══════════════════════════════════════════════════════════════
+
+Votre site sera à une URL comme:
+https://nsigafe-app.vercel.app
+
+PARTAGEZ CET URL AVEC TOUT LE MONDE!
+
+Mettez-le sur:
+- Facebook
+- WhatsApp
+- Instagram
+- TikTok
+- Par SMS
+- Partout!
+
+═══════════════════════════════════════════════════════════════
+
+🤔 ÇA N'A PAS MARCHÉ?
+═══════════════════════════════════════════════════════════════
+
+Si vous voyez une erreur:
+
+Erreur Git?
+→ Cherchez "How to use git" sur Google
+→ Regardez les fichiers MISE-EN-LIGNE.txt
+
+Erreur Vercel?
+→ Allez dans "Deployments" sur Vercel
+→ Cliquez sur l'erreur pour voir le message
+→ Google le message d'erreur
+
+Code pas à jour?
+→ Modifiez votre fichier localement
+→ Puis: git add . → git commit -m "Update" → git push
+→ Vercel se mettra à jour automatiquement!
+
+═══════════════════════════════════════════════════════════════
+
+💡 BONUS: Domaine personnalisé (optionnel)
+═══════════════════════════════════════════════════════════════
+
+Vous voulez "boubamanefoot.com" au lieu de vercel.app?
+
+1. Achetez un domaine sur namecheap.com (~12€/an)
+2. Sur Vercel → Settings → Domains
+3. Ajoutez votre domaine
+4. Suivez les instructions pour les DNS
+5. Attendez 24h
+
+═══════════════════════════════════════════════════════════════
+
+✨ VOILÀ! C'EST FAIT!
+═══════════════════════════════════════════════════════════════
+
+Vous avez mis votre site en ligne!
+
+Votre site est maintenant visible par:
+- Vos amis
+- Vos supporters
+- Le monde entier!
+- 24h/24, 7j/7
+
+Allez vérifier: https://nsigafe-app.vercel.app
+
+BRAVO! ⚽🎊
+
+═══════════════════════════════════════════════════════════════
+
+Questions?
+→ Lisez "GUIDE-VISUEL-DEPLOIEMENT.txt"
+→ Ou "MISE-EN-LIGNE.txt"
+
+═══════════════════════════════════════════════════════════════
+
+Créé pour Bouba & Mane Foot - Janvier 2026

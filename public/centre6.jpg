@@ -1,0 +1,23 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#E3F2FD"/>
+  <!-- Bâtiment principal -->
+  <rect x="200" y="200" width="400" height="300" fill="#FFFFFF" stroke="#1976D2" stroke-width="3"/>
+  <rect x="250" y="250" width="80" height="60" fill="#E3F2FD"/>
+  <rect x="350" y="250" width="80" height="60" fill="#E3F2FD"/>
+  <rect x="450" y="250" width="80" height="60" fill="#E3F2FD"/>
+  <polygon points="200,200 400,100 600,200" fill="#1976D2"/>
+  <!-- Parking -->
+  <rect x="50" y="350" width="100" height="200" fill="#BDBDBD"/>
+  <line x1="50" y1="380" x2="150" y2="380" stroke="white" stroke-width="20"/>
+  <line x1="50" y1="420" x2="150" y2="420" stroke="white" stroke-width="20"/>
+  <line x1="50" y1="460" x2="150" y2="460" stroke="white" stroke-width="20"/>
+  <!-- Voiture -->
+  <rect x="60" y="390" width="30" height="15" fill="#FF5722"/>
+  <circle cx="70" cy="410" r="5" fill="#424242"/>
+  <circle cx="85" cy="410" r="5" fill="#424242"/>
+  <!-- Panneau -->
+  <rect x="650" y="150" width="100" height="50" fill="#4CAF50"/>
+  <text x="700" y="175" text-anchor="middle" fill="white" font-size="14" font-weight="bold">ENTRÉE</text>
+  <text x="400" y="580" text-anchor="middle" fill="#1976D2" font-size="24" font-family="Arial">Vue Extérieure du Centre</text>
+  <text x="400" y="20" text-anchor="middle" fill="#1976D2" font-size="18" font-family="Arial">Bouba & Mane Foot</text>
+</svg>

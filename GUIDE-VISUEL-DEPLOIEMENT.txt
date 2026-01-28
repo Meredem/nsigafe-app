@@ -1,0 +1,144 @@
+╔═══════════════════════════════════════════════════════════════╗
+║  🌐 COMMENT METTRE VOTRE SITE EN LIGNE (GUIDE VISUEL)        ║
+╚═══════════════════════════════════════════════════════════════╝
+
+DURÉE TOTALE: ~15 minutes
+COÛT: GRATUIT! 💰
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 1: CRÉER UN COMPTE GITHUB (5 min)
+═══════════════════════════════════════════════════════════════
+
+1. Allez sur: https://github.com
+2. Cliquez le bouton "Sign up" (en haut à droite)
+3. Entrez votre email
+4. Créez un mot de passe
+5. Choisissez un nom d'utilisateur (ex: AboubBouba)
+6. Vérifiez votre email
+7. ✅ COMPTE GITHUB CRÉÉ!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 2: CRÉER UN REPOSITORY GITHUB (3 min)
+═══════════════════════════════════════════════════════════════
+
+1. Connecté à GitHub, cliquez "+" en haut à droite
+2. Cliquez "New repository"
+3. Nom: "nsigafe-app"
+4. Description: "Site officiel de Bouba & Mane Foot"
+5. Public: ✅ OUI (pour que tout le monde le voit)
+6. Cliquez "Create repository"
+7. ✅ REPOSITORY CRÉÉ!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 3: POUSSER VOTRE CODE (3 min)
+═══════════════════════════════════════════════════════════════
+
+Ouvrez PowerShell dans votre dossier du projet:
+
+cd "c:\Users\aboub\Downloads\nsigafe-app"
+
+Puis copier/coller ces commandes une par une:
+
+```
+git init
+git config user.email "contact@bouba-mane-foot.fr"
+git config user.name "Bouba Mane Foot"
+git add .
+git commit -m "Premier commit - Bouba & Mane Foot"
+git branch -M main
+git remote add origin https://github.com/VOTRE_USERNAME/nsigafe-app.git
+git push -u origin main
+```
+
+Remplacez "VOTRE_USERNAME" par votre nom GitHub!
+
+Si tout fonctionne:
+✅ VOTRE CODE EST SUR GITHUB!
+
+═══════════════════════════════════════════════════════════════
+
+📍 ÉTAPE 4: DÉPLOYER SUR VERCEL (3 min)
+═══════════════════════════════════════════════════════════════
+
+1. Allez sur: https://vercel.com
+2. Cliquez "Sign Up" 
+3. Cliquez "Continue with GitHub"
+4. Autorisez Vercel à accéder à GitHub
+5. Cliquez "New Project"
+6. Sélectionnez "nsigafe-app"
+7. Cliquez "Import"
+8. LE DÉPLOIEMENT COMMENCE! (attendez 2-3 min)
+9. Vous verrez un écran de succès avec votre URL
+
+✅ VOTRE SITE EST EN LIGNE!
+
+═══════════════════════════════════════════════════════════════
+
+🎉 RÉSULTAT FINAL
+═══════════════════════════════════════════════════════════════
+
+Votre site sera accessible à une URL comme:
+https://nsigafe-app.vercel.app
+
+PARTAGEZ CE LIEN AVEC TOUT LE MONDE! 📢
+
+═══════════════════════════════════════════════════════════════
+
+💡 ÉTAPE BONUS: DOMAINE PERSONNALISÉ (optionnel)
+═══════════════════════════════════════════════════════════════
+
+Pour avoir une URL comme "boubamanefoot.com":
+
+1. Achetez un domaine sur:
+   - Namecheap: https://namecheap.com (~12€/an)
+   - GoDaddy: https://godaddy.com
+   - OVH: https://ovh.com
+
+2. Allez dans les Settings de votre projet Vercel
+3. Onglet "Domains"
+4. Ajoutez votre domaine
+5. Modifiez les DNS (Vercel vous donnera les infos)
+6. Attendez 24h pour que ça se mette en place
+
+═══════════════════════════════════════════════════════════════
+
+❌ PROBLÈMES COURANTS & SOLUTIONS
+═══════════════════════════════════════════════════════════════
+
+PROBLÈME: "Repository not found"
+SOLUTION: Vérifiez votre URL GitHub, elle doit être exacte
+
+PROBLÈME: "Deployment failed"
+SOLUTION: Vérifiez les logs Vercel (cliquez sur "Deployments")
+
+PROBLÈME: "Les photos ne s'affichent pas"
+SOLUTION: Assurez-vous que les fichiers sont dans /public
+
+PROBLÈME: "Port 3000 is in use"
+SOLUTION: C'est normal, npm utilisera le port 3001 ou 3002
+
+═══════════════════════════════════════════════════════════════
+
+📞 BESOIN D'AIDE?
+═══════════════════════════════════════════════════════════════
+
+Docs Vercel:    https://vercel.com/docs
+Docs GitHub:    https://docs.github.com
+Docs Next.js:   https://nextjs.org/docs
+Aide Vercel:    https://vercel.com/support
+
+═══════════════════════════════════════════════════════════════
+
+FÉLICITATIONS! 🎊
+
+Votre site Bouba & Mane Foot est maintenant visible
+par le MONDE ENTIER! 🌍
+
+Allez vérifier: https://nsigafe-app.vercel.app
+
+Partagez avec vos amis et supporters! ⚽✨
+
+═══════════════════════════════════════════════════════════════
