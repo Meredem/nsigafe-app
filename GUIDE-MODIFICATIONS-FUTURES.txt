@@ -1,0 +1,255 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║        📚 GUIDE DE MODIFICATION - SAUVEGARDE COMPLÈTE 📚      ║
+║                                                                ║
+║              Pour modifier votre site plus tard               ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+VOTRE SITE EST COMPLÈTEMENT SAUVEGARDÉ! ✅
+════════════════════════════════════════════════════════════════
+
+1. Sur GitHub:        https://github.com/Meredem/nsigafe-app
+2. En ligne:          https://nsigafe-app.vercel.app
+3. Sur votre PC:      C:\Users\aboub\Downloads\nsigafe-app
+
+
+STRUCTURE DU PROJET (OÙ TOUT EST!)
+════════════════════════════════════════════════════════════════
+
+/app/page.tsx              ← ACCUEIL (page d'accueil)
+/app/matchs/page.tsx       ← MATCHS (les matchs à venir)
+/app/resultats/page.tsx    ← RÉSULTATS (les derniers scores)
+/app/equipe/page.tsx       ← ÉQUIPE (joueurs et staff)
+/app/centre/page.tsx       ← CENTRE (les installations)
+/app/galerie/page.tsx      ← GALERIE (les photos)
+/app/videos/page.tsx       ← VIDÉOS (les vidéos)
+/app/recrutement/page.tsx  ← RECRUTEMENT (formulaire)
+/app/contact/page.tsx      ← CONTACT (formulaire contact)
+/app/a-propos/page.tsx     ← À PROPOS (information)
+/app/actualites/page.tsx   ← ACTUALITÉS (news)
+/app/boutique/page.tsx     ← BOUTIQUE (produits)
+
+/public/                   ← LES PHOTOS
+  └─ foot1.jpg, foot2.jpg, foot3.jpg (Bouba & Mane)
+  └─ centre1.jpg à centre6.jpg (centre)
+  └─ logo_club.jpg (logo)
+
+/app/globals.css           ← LES ANIMATIONS ET STYLES
+
+/app/layout.tsx            ← HEADER ET FOOTER (en haut/bas)
+
+
+COMMENT MODIFIER VOTRE SITE?
+════════════════════════════════════════════════════════════════
+
+OPTION 1: SIMPLE (Texte, couleurs, contenu)
+─────────────────────────────────────────
+
+Dites-moi:
+  "Je veux changer..."
+  "Je veux ajouter..."
+  "Je veux modifier..."
+
+Et je le fais! 💪
+
+Exemples:
+  ✓ "Changer la couleur verte en bleu"
+  ✓ "Ajouter une nouvelle photo à la galerie"
+  ✓ "Modifier le texte de la page d'accueil"
+  ✓ "Ajouter un nouveau joueur dans l'équipe"
+  ✓ "Changer les numéros de téléphone"
+
+
+OPTION 2: AVANCÉE (Pour vous-même)
+──────────────────────────────────
+
+Si vous voulez apprendre à modifier vous-même:
+
+1. Installez VS Code: https://code.visualstudio.com
+2. Ouvrez le dossier: C:\Users\aboub\Downloads\nsigafe-app
+3. Modifiez les fichiers .tsx (comme du HTML)
+4. Testez: npm run dev
+5. Poussez: git add . ; git commit -m "..." ; git push
+
+
+OÙ SONT LES DONNÉES IMPORTANTES?
+════════════════════════════════════════════════════════════════
+
+NUMÉROS DE TÉLÉPHONE:
+  → /app/contact/page.tsx (ligne ~50)
+  → Actuellement: +224-620-02-71-18 & +336-65-37-12-39
+
+PHOTOS:
+  → /public/ (dossier)
+  → Ajoutez vos photos ici, puis modifiez les pages
+
+STAFF (Mane & Bouba):
+  → /app/equipe/page.tsx (ligne ~60)
+
+MATCHS GUINÉENS:
+  → /app/matchs/page.tsx
+  → AS Kindia, Horoya AC, Stade Conakry, CI Kamsar, FC Lafiaji
+
+RÉSULTATS:
+  → /app/resultats/page.tsx
+
+VIDÉOS:
+  → /app/videos/page.tsx
+
+COULEURS PRINCIPALES:
+  → /app/globals.css (à partir de ligne 10)
+  → Vert: from-green-500 to-green-600
+  → Bleu: from-blue-500 to-blue-600
+  → Jaune: border-yellow-400
+
+
+COMMENT AJOUTER UNE PHOTO?
+════════════════════════════════════════════════════════════════
+
+1. Mettez votre photo dans: /public/
+   (exemple: mon_photo.jpg)
+
+2. Dans la page où vous voulez l'ajouter (ex: /app/page.tsx)
+   Ajoutez cette ligne:
+   
+   <img src="/mon_photo.jpg" alt="Description" />
+
+3. Dites-moi, je le fais pour vous!
+
+
+COMMENT AJOUTER UNE PAGE?
+════════════════════════════════════════════════════════════════
+
+1. Créez un dossier: /app/ma-page/
+2. Créez un fichier: /app/ma-page/page.tsx
+3. Copiez le code d'une autre page
+4. Modifiez le contenu
+
+OU simplement demandez-moi! 😄
+
+
+COMMENT MODIFIER LE TEXTE?
+════════════════════════════════════════════════════════════════
+
+Les fichiers .tsx ressemblent à du HTML avec des balises:
+
+<h1>Mon titre</h1>           ← Titre grand
+<h2>Mon sous-titre</h2>      ← Sous-titre
+<p>Mon texte</p>             ← Paragraphe
+<button>Mon bouton</button>   ← Bouton
+
+Trouvez le texte et changez-le!
+
+
+COMMENT CHANGER LES COULEURS?
+════════════════════════════════════════════════════════════════
+
+Les couleurs utilisent des classes Tailwind CSS:
+
+bg-green-500      ← Fond vert
+text-blue-600     ← Texte bleu
+border-yellow-400 ← Bordure jaune
+from-red-500      ← Dégradé rouge
+
+Exemples de changement:
+  green-500 → blue-500    (vert → bleu)
+  green-600 → blue-600
+  
+OU demandez-moi simplement! 💪
+
+
+CONTACT AVEC VERCEL
+════════════════════════════════════════════════════════════════
+
+Le site se redéploie automatiquement quand:
+  ✓ Vous modifiez un fichier
+  ✓ Vous poussez vers GitHub
+  ✓ Vercel voit les changements
+  ✓ Le site est mis à jour en 2-3 minutes!
+
+Pas besoin de faire quoi que ce soit d'autre!
+
+
+VOTRE HISTORIQUE GIT
+════════════════════════════════════════════════════════════════
+
+Tous les changements sont sauvegardés sur GitHub:
+  https://github.com/Meredem/nsigafe-app
+
+Vous pouvez revenir en arrière si vous faites une erreur!
+
+
+BESOIN D'AIDE?
+════════════════════════════════════════════════════════════════
+
+Dites-moi simplement:
+  "Je veux ajouter..."
+  "Je veux modifier..."
+  "Je veux changer..."
+
+Et je le fais! 💯
+
+Je peux modifier:
+  ✓ Du texte
+  ✓ Des images
+  ✓ Des couleurs
+  ✓ Des pages
+  ✓ Des sections
+  ✓ Des animations
+  ✓ Des formulaires
+  ✓ TOUT!
+
+
+FICHIERS IMPORTANTS À CONNAÎTRE
+════════════════════════════════════════════════════════════════
+
+package.json      ← Les dépendances (versions, npm install)
+vercel.json       ← Configuration Vercel
+.gitignore        ← Fichiers à ignorer sur GitHub
+tailwind.config   ← Configuration des couleurs
+next.config.js    ← Configuration Next.js
+
+
+ACCÈS RAPIDE
+════════════════════════════════════════════════════════════════
+
+Site en ligne:    https://nsigafe-app.vercel.app
+GitHub:           https://github.com/Meredem/nsigafe-app
+Vercel:           https://vercel.com
+Votre PC:         C:\Users\aboub\Downloads\nsigafe-app
+
+
+RÉSUMÉ
+════════════════════════════════════════════════════════════════
+
+✅ Tout est sauvegardé sur GitHub
+✅ Tout est en ligne sur Vercel
+✅ Vous pouvez modifier quand vous voulez
+✅ Dites-moi, je fais le changement
+✅ Le site se met à jour automatiquement
+✅ Pas de risque de perdre vos données
+✅ Pas besoin de reprogrammer
+✅ Tout est simple et automatisé!
+
+
+VOUS ÊTES PRÊT! 🚀
+════════════════════════════════════════════════════════════════
+
+Votre site est:
+  ✓ Complet
+  ✓ Professionnel
+  ✓ En ligne
+  ✓ Sauvegardé
+  ✓ Modifiable à tout moment
+
+Partagez-le et profitez-en! ⚽
+
+Pour toute modification future, contactez-moi!
+
+════════════════════════════════════════════════════════════════
+
+Créé pour Bouba & Mane Foot ⚽
+Janvier 2026
+
+════════════════════════════════════════════════════════════════
