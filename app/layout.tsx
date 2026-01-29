@@ -17,7 +17,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="min-h-screen bg-gradient-to-b from-green-900 to-green-800">  
+      <body className="min-h-screen bg-gradient-to-b from-green-900 to-green-800 relative overflow-x-hidden">  
+        {/* Ballon de football géant en fond */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vmax] h-[150vmax] rounded-full bg-[radial-gradient(circle_at_35%_30%,#ffffff_0%,#f0f0f0_20%,#d8d8d8_45%,#b8b8b8_70%,#8f8f8f_100%)] opacity-30 shadow-[inset_0_0_100px_rgba(0,0,0,0.3)]">
+            {/* Motifs hexagones de ballon */}
+            <div className="absolute top-[20%] left-[30%] w-[15%] h-[15%] bg-black/20 transform rotate-12 clip-path-polygon-[50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%]"></div>
+            <div className="absolute top-[45%] left-[15%] w-[18%] h-[18%] bg-black/15 transform rotate-45"></div>
+            <div className="absolute top-[60%] left-[50%] w-[20%] h-[20%] bg-black/20 transform -rotate-30"></div>
+            <div className="absolute top-[25%] left-[65%] w-[16%] h-[16%] bg-black/18 transform rotate-60"></div>
+            <div className="absolute top-[75%] left-[25%] w-[14%] h-[14%] bg-black/15 transform rotate-90"></div>
+          </div>
+        </div>
         {/* client script to scale desktop layout to fit mobile for pixel-perfect parity */}
         <header className="bg-gradient-to-b from-green-700 via-green-600 to-green-500 text-white shadow-2xl sticky top-0 z-50">
           <div className="container mx-auto px-4 py-12">
