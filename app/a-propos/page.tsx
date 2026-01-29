@@ -9,7 +9,7 @@ export default function APropos() {
           <p className="text-2xl text-green-600 font-bold">On Crée Des Talents</p>
           <div className="mt-6 flex justify-center">
             <img
-              src="/photo.jpg"
+              src="/foot3.jpg"
               alt="Centre Sportif Bouba & Mane"
               className="h-40 w-40 md:h-52 md:w-52 object-cover rounded-full shadow-2xl border-4 border-yellow-400"
             />
