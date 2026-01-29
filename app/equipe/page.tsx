@@ -11,7 +11,7 @@ export default function Equipe() {
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">👥 Notre Équipe</h2>
-          <p className="text-xl text-gray-600">Découvrez les joueurs talentueux de Bouba & Mane Foot</p>
+          <p className="text-xl text-gray-600">Découvrez les joueurs talentueux du Centre Sportif Bouba & Mane</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {joueurs.map((joueur, index) => (
