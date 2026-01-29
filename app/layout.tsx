@@ -19,14 +19,19 @@ export default function RootLayout({
     <html lang="fr">
       <body className="min-h-screen bg-gradient-to-b from-green-900 to-green-800 relative overflow-x-hidden">  
         {/* Ballon de football géant en fond */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vmax] h-[150vmax] rounded-full bg-[radial-gradient(circle_at_35%_30%,#ffffff_0%,#f0f0f0_20%,#d8d8d8_45%,#b8b8b8_70%,#8f8f8f_100%)] opacity-30 shadow-[inset_0_0_100px_rgba(0,0,0,0.3)]">
-            {/* Motifs hexagones de ballon */}
-            <div className="absolute top-[20%] left-[30%] w-[15%] h-[15%] bg-black/20 transform rotate-12 clip-path-polygon-[50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%]"></div>
-            <div className="absolute top-[45%] left-[15%] w-[18%] h-[18%] bg-black/15 transform rotate-45"></div>
-            <div className="absolute top-[60%] left-[50%] w-[20%] h-[20%] bg-black/20 transform -rotate-30"></div>
-            <div className="absolute top-[25%] left-[65%] w-[16%] h-[16%] bg-black/18 transform rotate-60"></div>
-            <div className="absolute top-[75%] left-[25%] w-[14%] h-[14%] bg-black/15 transform rotate-90"></div>
+        <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center">
+          <div className="relative w-[200vmax] h-[200vmax] rounded-full bg-gradient-to-br from-white via-gray-200 to-gray-400 opacity-45 shadow-[inset_0_0_250px_rgba(0,0,0,0.5)]">
+            {/* Motifs hexagones noirs du ballon */}
+            <div className="absolute top-[15%] left-[35%] w-40 h-40 bg-black/40 rotate-12 rounded-xl"></div>
+            <div className="absolute top-[20%] left-[55%] w-36 h-36 bg-black/35 rotate-45 rounded-xl"></div>
+            <div className="absolute top-[35%] left-[25%] w-44 h-44 bg-black/45 -rotate-30 rounded-xl"></div>
+            <div className="absolute top-[40%] left-[65%] w-40 h-40 bg-black/38 rotate-60 rounded-xl"></div>
+            <div className="absolute top-[55%] left-[45%] w-48 h-48 bg-black/42 -rotate-15 rounded-xl"></div>
+            <div className="absolute top-[65%] left-[30%] w-36 h-36 bg-black/35 rotate-90 rounded-xl"></div>
+            <div className="absolute top-[70%] left-[60%] w-38 h-38 bg-black/40 -rotate-45 rounded-xl"></div>
+            <div className="absolute top-[25%] left-[70%] w-34 h-34 bg-black/32 rotate-75 rounded-xl"></div>
+            <div className="absolute top-[45%] left-[15%] w-40 h-40 bg-black/38 -rotate-60 rounded-xl"></div>
+            <div className="absolute top-[60%] left-[75%] w-36 h-36 bg-black/34 rotate-30 rounded-xl"></div>
           </div>
         </div>
         {/* client script to scale desktop layout to fit mobile for pixel-perfect parity */}
