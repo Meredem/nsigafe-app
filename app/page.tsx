@@ -21,7 +21,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-green-900 to-gray-900">
+    <div className="relative min-h-screen bg-gradient-to-b from-gray-900 via-green-900 to-gray-900 overflow-hidden">
+      {/* Grand ballon de fond */}
+      <div className="pointer-events-none absolute -top-40 -right-40 h-[900px] w-[900px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffffff_0%,#f8f8f8_35%,#dcdcdc_60%,#c0c0c0_100%)] opacity-20 blur-[2px]" />
+      <div className="pointer-events-none absolute -bottom-56 -left-56 h-[900px] w-[900px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffffff_0%,#f8f8f8_35%,#dcdcdc_60%,#c0c0c0_100%)] opacity-15 blur-[2px]" />
       {/* SECTION HERO ANIMÉE */}
       <section className="relative h-screen overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-blue-900/80"></div>
