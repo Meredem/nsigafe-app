@@ -23,7 +23,7 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-12">
             {/* Logo & Titre Section */}
             <div className="flex flex-col items-center text-center mb-8">
-              <img src="/photo.jpg" alt="Logo Centre Sportif Bouba & Mane" className="h-48 w-48 object-cover rounded-full shadow-2xl border-6 border-yellow-400 hover:scale-105 transition-transform duration-300 mb-6" />
+              <img src="/logo_club.jpg" alt="Logo Centre Sportif Bouba & Mane" className="h-48 w-48 object-contain rounded-full shadow-2xl border-6 border-yellow-400 hover:scale-105 transition-transform duration-300 mb-6" />
               <h1 className="text-5xl font-black drop-shadow-lg">Centre Sportif Bouba & Mane</h1>
               <p className="text-2xl text-yellow-300 font-bold mt-2">🌟 On Crée Des Talents 🌟</p>
               <p className="text-lg text-yellow-100 mt-1">Excellence • Passion • Formation</p>
