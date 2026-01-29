@@ -7,6 +7,13 @@ export default function APropos() {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">🏆 Centre Sportif Bouba & Mane</h2>
           <p className="text-2xl text-green-600 font-bold">On Crée Des Talents</p>
+          <div className="mt-6 flex justify-center">
+            <img
+              src="/photo.jpg"
+              alt="Centre Sportif Bouba & Mane"
+              className="h-40 w-40 md:h-52 md:w-52 object-cover rounded-full shadow-2xl border-4 border-yellow-400"
+            />
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
