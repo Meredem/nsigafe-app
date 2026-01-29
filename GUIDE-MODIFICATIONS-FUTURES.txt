@@ -31,7 +31,7 @@ STRUCTURE DU PROJET (OÙ TOUT EST!)
 /app/boutique/page.tsx     ← BOUTIQUE (produits)
 
 /public/                   ← LES PHOTOS
-  └─ foot1.jpg, foot2.jpg, foot3.jpg (Bouba & Mane)
+  └─ foot1.jpg, foot2.jpg, foot3.jpg (Centre Sportif Bouba & Mane)
   └─ centre1.jpg à centre6.jpg (centre)
   └─ logo_club.jpg (logo)
 

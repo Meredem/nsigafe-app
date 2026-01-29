@@ -1,4 +1,4 @@
-🚀 **BOUBA & MANE FOOT - METTRE EN LIGNE EN 5 MINUTES**
+🚀 **CENTRE SPORTIF BOUBA & MANE - METTRE EN LIGNE EN 5 MINUTES**
 
 =====================================================
 
@@ -9,10 +9,10 @@ Ouvrez PowerShell dans le dossier du projet et exécutez:
 ```powershell
 cd "c:\Users\aboub\Downloads\nsigafe-app"
 git init
-git config user.email "contact@bouba-mane-foot.fr"
+git config user.email "contact@centresportif-boubamane@example.com"
 git config user.name "Bouba Mane Foot"
 git add .
-git commit -m "Initial commit - Bouba & Mane Foot"
+git commit -m "Initial commit - Centre Sportif Bouba & Mane"
 ```
 
 =====================================================

@@ -1,8 +1,8 @@
-# ⚽ Bouba & Mane Foot - Site Officiel
+# ⚽ Centre Sportif Bouba & Mane - Site Officiel
 
-**Bienvenue sur le site officiel du club de football Bouba & Mane Foot!**
+**Bienvenue sur le site officiel du Centre Sportif Bouba & Mane!**
 
-Un site web moderne, dynamique et spectaculaire pour présenter le meilleur club de football de Guinée.
+Un site web moderne, dynamique et spectaculaire pour présenter notre centre sportif de football.
 
 ## 🎯 Fonctionnalités Principales
 
@@ -102,11 +102,11 @@ npm start
 
 ## 📄 License
 
-© 2026 Bouba & Mane Foot. Tous droits réservés.
+© 2026 Centre Sportif Bouba & Mane. Tous droits réservés.
 
 ---
 
-**Créé pour faire briller le meilleur club de Guinée! ⚽✨**
+**Créé pour promouvoir le Centre Sportif Bouba & Mane! ⚽✨**
 
 ## Fonctionnalités
 

@@ -33,7 +33,7 @@ Un dépôt = Une place pour vos fichiers du site
 1. Sur GitHub, cliquez "+" en haut à droite
 2. Cliquez "New repository"
 3. Nom: nsigafe-app
-4. Description: Bouba & Mane Foot
+4. Description: Centre Sportif Bouba & Mane
 5. Cliquez "Create repository"
 6. ✅ FAIT!
 
@@ -59,7 +59,7 @@ git init
 
 6. Puis ceci:
 
-git config user.email "contact@bouba-mane-foot.fr"
+git config user.email "contact@centresportif-boubamane@example.com"
 
 7. Puis:
 
@@ -71,7 +71,7 @@ git add .
 
 9. Puis:
 
-git commit -m "Mon site Bouba & Mane Foot"
+git commit -m "Mon site Centre Sportif Bouba & Mane"
 
 10. Puis ceci (REMPLACEZ MON_USERNAME par votre pseudo GitHub):
 

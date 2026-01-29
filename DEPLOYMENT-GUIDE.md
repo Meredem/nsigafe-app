@@ -1,4 +1,4 @@
-# 🚀 Guide de Déploiement - Bouba & Mane Foot
+# 🚀 Guide de Déploiement - Centre Sportif Bouba & Mane
 
 ## **Option 1: VERCEL (RECOMMANDÉ - Facile et Gratuit)**
 

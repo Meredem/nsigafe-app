@@ -2,7 +2,7 @@
 ║                                                                ║
 ║           ✅ PROJET TERMINÉ - SAUVEGARDE COMPLÈTE ✅          ║
 ║                                                                ║
-║               Bouba & Mane Foot - Site Football               ║
+║               Centre Sportif Bouba & Mane - Site Sportif               ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
@@ -13,7 +13,7 @@ STATUT: ✅ 100% TERMINÉ ET EN LIGNE
 RÉSUMÉ DU PROJET
 ════════════════════════════════════════════════════════════════
 
-Site Web Professionnel créé pour Bouba & Mane Foot
+Site Web Professionnel créé pour le Centre Sportif Bouba & Mane
 Accessible au monde entier
 Complètement gratuit
 Modifiable à tout moment
@@ -22,7 +22,7 @@ Modifiable à tout moment
 INFORMATIONS CLÉS
 ════════════════════════════════════════════════════════════════
 
-Club:                Bouba & Mane Foot
+Centre:              Centre Sportif Bouba & Mane
 Année:               2026
 Pays:                Guinée
 Entraîneurs:         Mane & Bouba

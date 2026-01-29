@@ -1,6 +1,6 @@
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
-║   🎉 BOUBA & MANE FOOT - SITE TERMINÉ ET PRÊT À METTRE EN LIGNE! 🎉  ║
+║   🎉 CENTRE SPORTIF BOUBA & MANE - SITE TERMINÉ ET PRÊT À METTRE EN LIGNE! 🎉  ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
@@ -45,7 +45,7 @@
 
 👥 ÉQUIPE (/equipe)
   - Joueurs talentueux avec numéros
-  - Staff "Mane & Bouba" comme co-entraîneurs
+  - Staff "Mane & Bouba" comme co-entraîneurs du Centre Sportif
   - Design spectaculaire
 
 🏟️ CENTRE (/centre)
@@ -54,7 +54,7 @@
   - Horaires d'ouverture
 
 📸 GALERIE (/galerie)
-  - Photos de Bouba & Mane Foot
+  - Photos du Centre Sportif Bouba & Mane
   - Centre d'entraînement (6 images)
   - Zoom et animations
 

@@ -1,6 +1,6 @@
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
-║     ⚽ BOUBA & MANE FOOT - SITE FOOTBALL PROFESSIONNEL ⚽      ║
+║     ⚽ CENTRE SPORTIF BOUBA & MANE - SITE SPORTIF PROFESSIONNEL ⚽      ║
 ║                                                                ║
 ║                    ✅ 100% TERMINÉ ✅                          ║
 ║                                                                ║
@@ -132,7 +132,7 @@ Email: contact@bouba-mane-foot.fr ✓
 
 🏆 INFORMATIONS CLUB
 
-Nom: Bouba & Mane Foot
+Nom: Centre Sportif Bouba & Mane
 Fondation: 2026
 Lieu: Guinée
 Spécialité: Football excellence

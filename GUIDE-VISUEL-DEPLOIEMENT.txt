@@ -26,7 +26,7 @@ COÛT: GRATUIT! 💰
 1. Connecté à GitHub, cliquez "+" en haut à droite
 2. Cliquez "New repository"
 3. Nom: "nsigafe-app"
-4. Description: "Site officiel de Bouba & Mane Foot"
+4. Description: "Site officiel du Centre Sportif Bouba & Mane"
 5. Public: ✅ OUI (pour que tout le monde le voit)
 6. Cliquez "Create repository"
 7. ✅ REPOSITORY CRÉÉ!
@@ -47,7 +47,7 @@ git init
 git config user.email "contact@bouba-mane-foot.fr"
 git config user.name "Bouba Mane Foot"
 git add .
-git commit -m "Premier commit - Bouba & Mane Foot"
+git commit -m "Premier commit - Centre Sportif Bouba & Mane"
 git branch -M main
 git remote add origin https://github.com/VOTRE_USERNAME/nsigafe-app.git
 git push -u origin main

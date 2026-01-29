@@ -1,7 +1,7 @@
 ╔════════════════════════════════════════════════════════════════╗
 ║                    🎉 FÉLICITATIONS! 🎉                       ║
 ║                                                                ║
-║   VOTRE SITE BOUBA & MANE FOOT EST PRÊT À METTRE EN LIGNE!   ║
+║   VOTRE SITE CENTRE SPORTIF BOUBA & MANE EST PRÊT À METTRE EN LIGNE!   ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 
@@ -12,7 +12,7 @@
    - Accueil spectaculaire (section héros, stats, galerie, etc.)
    - Matchs avec clubs guinéens
    - Résultats avec statistiques
-   - Équipe avec staff "Mane & Bouba"
+   - Centre sportif avec staff "Mane & Bouba"
    - Centre d'entraînement
    - Galerie photos interactive
    - Vidéos (nouveau!)
@@ -140,7 +140,7 @@ Tailwind CSS Docs: https://tailwindcss.com/docs
 ════════════════════════════════════════════════════════════════
 
 Vous avez maintenant un site professionnel, moderne et
-spectaculaire pour présenter Bouba & Mane Foot au monde!
+spectaculaire pour présenter le Centre Sportif Bouba & Mane au monde!
 
 C'est le moment de:
 1. Mettre en ligne
