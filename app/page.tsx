@@ -33,8 +33,8 @@ export default function Home() {
           style={{backgroundImage: "url('/logo_club.jpg')"}}
         />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-7xl font-black mb-4 animate-pulse">⚽ BOUBA & MANE FOOT ⚽</h1>
-          <p className="text-3xl font-bold mb-6 text-yellow-300">Excellence • Passion • Victoire</p>
+          <h1 className="text-7xl font-black mb-4 animate-pulse">⚽ CENTRE SPORTIF BOUBA & MANE ⚽</h1>
+          <p className="text-3xl font-bold mb-6 text-yellow-300">Excellence • Passion • Formation</p>
           <div className="flex gap-6 justify-center mb-12">
             <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-full hover:scale-110 transition-transform shadow-2xl">🎯 Rejoindre</button>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-full hover:scale-110 transition-transform shadow-2xl">📅 Calendrier</button>
@@ -181,9 +181,9 @@ export default function Home() {
 
         {/* RECRUTEMENT */}
         <section className="mb-20">
-          <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-12 text-white text-center shadow-2xl">
-            <h3 className="text-4xl font-black mb-4">🎽 Rejoignez Notre Équipe!</h3>
-            <p className="text-xl mb-8">Vous êtes passionné par le football? Tentez votre chance avec Bouba & Mane Foot!</p>
+            <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-12 text-white text-center shadow-2xl">
+            <h3 className="text-4xl font-black mb-4">🎽 Rejoignez Notre Centre!</h3>
+            <p className="text-xl mb-8">Vous êtes passionné par le football? Rejoignez le Centre Sportif Bouba & Mane!</p>
             <button className="px-10 py-4 bg-white text-green-600 font-bold rounded-full hover:scale-110 transition-transform shadow-lg">
               📝 Postuler Maintenant
             </button>

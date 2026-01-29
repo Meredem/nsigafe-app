@@ -2,11 +2,11 @@ export default function APropos() {
   return (
     <div className="min-h-screen bg-gray-50">
       <main className="container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold text-center mb-8">À propos de Bouba & Mane Foot</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">À propos du Centre Sportif Bouba & Mane</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-gray-700 mb-6">
-            Bouba & Mane Foot est un club de football passionné fondé en 2020. Notre mission est de promouvoir le football
-            auprès des jeunes et de la communauté, en offrant un environnement positif et inclusif pour tous les joueurs.
+            Le Centre Sportif Bouba & Mane est un centre de football fondé en 2020. Notre mission est de former et promouvoir
+            les jeunes talents, offrir un environnement d'entraînement professionnel et soutenir la communauté locale.
           </p>
           <h3 className="text-2xl font-semibold mb-4">Notre Histoire</h3>
           <p className="text-gray-600 mb-6">

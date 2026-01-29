@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Bouba & Mane Foot - Club de Football",
-  description: 'Site officiel du club de football Bouba & Mane Foot',
+  title: "Centre Sportif Bouba & Mane",
+  description: "Site officiel du Centre Sportif Bouba & Mane",
 }
 
 export default function RootLayout({
@@ -21,10 +21,10 @@ export default function RootLayout({
           <div className="container mx-auto px-4 py-6">
             <div className="flex justify-between items-center">
               <div className="flex items-center space-x-6">
-                <img src="/logo_club.jpg" alt="Logo Bouba & Mane Foot" className="h-20 w-20 object-contain rounded-full shadow-lg border-4 border-yellow-400 hover:scale-110 transition-transform duration-300" />
+                <img src="/logo_club.jpg" alt="Logo Centre Sportif Bouba & Mane" className="h-20 w-20 object-contain rounded-full shadow-lg border-4 border-yellow-400 hover:scale-110 transition-transform duration-300" />
                 <div>
-                  <h1 className="text-4xl font-bold">Bouba & Mane Foot</h1>
-                  <p className="text-yellow-300 text-sm">Club de Football Excellence</p>
+                  <h1 className="text-4xl font-bold">Centre Sportif Bouba & Mane</h1>
+                  <p className="text-yellow-300 text-sm">Centre sportif de football - Excellence & Passion</p>
                 </div>
               </div>
               <nav className="flex space-x-6 text-sm font-semibold">
@@ -46,7 +46,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className="bg-gradient-to-r from-green-900 to-green-800 text-white p-8 text-center border-t-4 border-yellow-400 shadow-2xl">
-          <p className="text-lg font-semibold">&copy; 2026 Bouba & Mane Foot. Tous droits réservés.</p>
+          <p className="text-lg font-semibold">&copy; 2026 Centre Sportif Bouba & Mane. Tous droits réservés.</p>
           <p className="text-yellow-300 text-sm mt-2">Excellence, Passion, Football</p>
         </footer>
       </body>

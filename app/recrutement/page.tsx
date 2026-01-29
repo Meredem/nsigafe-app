@@ -27,7 +27,7 @@ export default function Recrutement() {
       <main className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-white mb-4">🎽 Rejoignez Notre Équipe!</h2>
-          <p className="text-xl text-gray-400">Vous êtes talentueux? Tentez votre chance avec Bouba & Mane Foot</p>
+          <p className="text-xl text-gray-400">Vous êtes talentueux? Tentez votre chance avec le Centre Sportif Bouba & Mane</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
