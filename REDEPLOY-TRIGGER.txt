@@ -1,0 +1,3 @@
+Trigger redeploy on Vercel
+Date: 2026-01-29
+Purpose: Small commit to trigger Vercel automatic redeploy after site rename to Centre Sportif Bouba & Mane.
