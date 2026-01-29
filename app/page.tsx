@@ -22,9 +22,10 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-gray-900 via-green-900 to-gray-900 overflow-hidden">
-      {/* Grand ballon de fond */}
-      <div className="pointer-events-none absolute -top-40 -right-40 h-[900px] w-[900px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffffff_0%,#f8f8f8_35%,#dcdcdc_60%,#c0c0c0_100%)] opacity-20 blur-[2px]" />
-      <div className="pointer-events-none absolute -bottom-56 -left-56 h-[900px] w-[900px] rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffffff_0%,#f8f8f8_35%,#dcdcdc_60%,#c0c0c0_100%)] opacity-15 blur-[2px]" />
+      {/* Grand ballon de fond (plein écran) */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[140vmax] w-[140vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_35%_30%,#ffffff_0%,#f5f5f5_28%,#d9d9d9_55%,#bdbdbd_78%,#8a8a8a_100%)] opacity-25 blur-[1px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[120vmax] w-[120vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_30%_30%,#ffffff_0%,#fafafa_30%,#e3e3e3_60%,#c7c7c7_85%,#9a9a9a_100%)] opacity-20" />
+      <div className="relative z-10">
       {/* SECTION HERO ANIMÉE */}
       <section className="relative h-screen overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-blue-900/80"></div>
@@ -231,6 +232,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      </div>
     </div>
   )
 }
