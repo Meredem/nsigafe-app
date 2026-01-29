@@ -38,11 +38,52 @@ export default function Centre() {
         
         {/* Titre principal */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">🏟️ Notre Centre d'Entraînement</h2>
+          <h2 className="text-5xl font-bold text-gray-800 mb-4">🏟️ Centre de Formation d'Excellence</h2>
+          <p className="text-2xl text-green-600 font-bold mb-4">Créer Des Talents, Forger Des Champions</p>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Découvrez nos installations modernes et adaptées à la pratique du football de haut niveau.
-            Notre centre offre tous les équipements nécessaires pour le développement des talents.
+            Notre centre dispose d'infrastructures de niveau européen pour offrir aux jeunes talents 
+            les meilleures conditions d'entraînement et de développement.
           </p>
+        </div>
+
+        {/* Programmes de Formation */}
+        <div className="mb-20">
+          <h3 className="text-4xl font-bold text-center mb-12 text-gray-800">📚 Nos Programmes de Formation</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-8 rounded-2xl shadow-xl">
+              <div className="text-5xl mb-4">🎓</div>
+              <h4 className="text-2xl font-bold mb-4">École de Jeunes</h4>
+              <p className="mb-4">6-12 ans • 3 séances/semaine</p>
+              <ul className="space-y-2 text-sm">
+                <li>✓ Initiation technique</li>
+                <li>✓ Développement moteur</li>
+                <li>✓ Jeu collectif</li>
+                <li>✓ Fair-play et discipline</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl">
+              <div className="text-5xl mb-4">⚽</div>
+              <h4 className="text-2xl font-bold mb-4">Pré-Formation</h4>
+              <p className="mb-4">13-15 ans • 5 séances/semaine</p>
+              <ul className="space-y-2 text-sm">
+                <li>✓ Perfectionnement technique</li>
+                <li>✓ Tactique individuelle</li>
+                <li>✓ Préparation physique</li>
+                <li>✓ Matchs de compétition</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-500 to-orange-500 text-white p-8 rounded-2xl shadow-xl">
+              <div className="text-5xl mb-4">🏆</div>
+              <h4 className="text-2xl font-bold mb-4">Formation Pro</h4>
+              <p className="mb-4">16-21 ans • Quotidien</p>
+              <ul className="space-y-2 text-sm">
+                <li>✓ Entraînements pro</li>
+                <li>✓ Contrat de formation</li>
+                <li>✓ Suivi individualisé</li>
+                <li>✓ Placement en clubs pros</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Installations */}
