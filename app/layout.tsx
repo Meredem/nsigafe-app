@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import ScaleClient from './components/ScaleClient'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="min-h-screen bg-gradient-to-b from-green-900 to-green-800">
+      <body className="min-h-screen bg-gradient-to-b from-green-900 to-green-800">  
+        {/* client script to scale desktop layout to fit mobile for pixel-perfect parity */}
         <header className="bg-gradient-to-r from-green-700 to-green-600 text-white shadow-2xl sticky top-0 z-50">
           <div className="container mx-auto px-4 py-6">
             <div className="flex justify-between items-center">
@@ -42,7 +44,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="relative z-10 min-h-screen">
+        <main className="relative z-10 min-h-screen"> 
+          {/* Scale client component runs only in the browser */}
+          <ScaleClient />
           {children}
         </main>
         <footer className="bg-gradient-to-r from-green-900 to-green-800 text-white p-8 text-center border-t-4 border-yellow-400 shadow-2xl">

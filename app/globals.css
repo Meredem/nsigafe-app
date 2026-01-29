@@ -51,3 +51,31 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* --- Force desktop-scale for pixel-perfect mobile parity --- */
+:root {
+  --desktop-width: 1366px;
+  --site-scale: 1;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Scale the entire body to match desktop layout on narrow viewports. */
+body {
+  transform-origin: top left;
+  transform: scale(var(--site-scale));
+  width: calc(100% / var(--site-scale));
+}
+
+/* Make sure overflow is handled after scaling */
+#__next {
+  min-height: 100vh;
+}
+
+/* Utility to disable scaling if needed */
+body.no-scale {
+  transform: none !important;
+  width: 100% !important;
+}
