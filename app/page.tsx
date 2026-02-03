@@ -127,10 +127,11 @@ export default function Home() {
           <h3 className="text-4xl font-black text-center text-white mb-12">⭐ Nos Joueurs d'Exception</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { nom: 'Bouba', numero: 10, poste: 'Attaquant', emoji: '⚡' },
-              { nom: 'Mane', numero: 7, poste: 'Milieu', emoji: '🎯' },
-              { nom: 'Diallo', numero: 1, poste: 'Gardien', emoji: '🛡️' },
-              { nom: 'Sow', numero: 5, poste: 'Défenseur', emoji: '💪' }
+              { nom: 'Mohamed Camara', numero: 1, poste: 'Défenseur', emoji: '🛡️' },
+              { nom: 'Daouda Sylla', numero: 2, poste: 'Milieu', emoji: '🎯' },
+              { nom: 'Moustapha Fofana', numero: 3, poste: 'Attaquant', emoji: '⚡' },
+              { nom: 'Wahab Keita', numero: 4, poste: 'Défenseur', emoji: '💪' },
+              { nom: 'Djibril Toure', numero: 5, poste: 'Milieu', emoji: '🏃' }
             ].map((joueur, i) => (
               <div key={i} className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2">
                 <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-6xl">
