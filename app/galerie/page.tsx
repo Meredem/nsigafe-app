@@ -59,6 +59,37 @@ export default function Galerie() {
           </div>
         </div>
 
+        {/* Section Moments Forts 2026 - NOUVELLES PHOTOS */}
+        <div className="mb-20 bg-gradient-to-r from-red-50 to-yellow-50 p-8 rounded-3xl border-4 border-red-400">
+          <h3 className="text-4xl font-bold mb-8 text-center text-red-900">🔥 Nouveaux Moments Forts 2026</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/foot1.jpeg" alt="Match - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-semibold text-gray-700">Match - Photo nouvelle</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/foot2.jpeg" alt="Équipe - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-semibold text-gray-700">Équipe - Photo nouvelle</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/foot4.jpeg" alt="Entraînement - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-semibold text-gray-700">Entraînement - Photo nouvelle</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/foot5.jpeg" alt="Moment fort - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-semibold text-gray-700">Moment fort - Photo nouvelle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Section Événements et Matchs */}
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-3xl">
           <h3 className="text-4xl font-bold mb-8 text-center text-purple-900">🎯 Événements et Matchs</h3>
