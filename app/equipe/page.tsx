@@ -1,9 +1,10 @@
 export default function Equipe() {
   const joueurs = [
-    { nom: 'Jean Dupont', poste: 'Gardien', numero: 1 },
-    { nom: 'Pierre Martin', poste: 'Défenseur', numero: 2 },
-    { nom: 'Paul Durand', poste: 'Milieu', numero: 10 },
-    { nom: 'Jacques Leroy', poste: 'Attaquant', numero: 9 },
+    { nom: 'Mohamed Camara', poste: 'Pré-sélectionné', numero: 1 },
+    { nom: 'Daouda Sylla', poste: 'Pré-sélectionné', numero: 2 },
+    { nom: 'Moustapha Fofana', poste: 'Pré-sélectionné', numero: 3 },
+    { nom: 'Wahab Keita', poste: 'Pré-sélectionné', numero: 4 },
+    { nom: 'Djibril Toure', poste: 'Pré-sélectionné', numero: 5 },
   ]
 
   return (
