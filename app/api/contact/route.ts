@@ -11,10 +11,10 @@ export async function POST(request: NextRequest) {
   try {
     // Récupération du corps de la requête JSON
     const body = await request.json()
-    const { name, email, phone, subject, message } = body
+    const { name, email, subject, message } = body
 
     // Validation des champs requis
-    if (!name || !email || !phone || !subject || !message) {
+    if (!name || !email || !subject || !message) {
       return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 })
     }
 
@@ -23,7 +23,6 @@ export async function POST(request: NextRequest) {
       id: Date.now().toString(),
       name,
       email,
-      phone,
       subject,
       message,
       timestamp: new Date().toISOString()

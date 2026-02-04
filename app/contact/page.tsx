@@ -82,7 +82,7 @@ export default function Contact() {
                   <span className="text-2xl mr-4">✉️</span>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-sm opacity-90">contact@bouba-mane-foot.fr</p>
+                    <a href="mailto:aboubacarsdk22@gmail.com" className="text-sm opacity-90 underline">aboubacarsdk22@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start p-4 bg-white bg-opacity-20 rounded-lg">
