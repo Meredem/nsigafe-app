@@ -1,8 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
-
-// Initialisation du client Resend
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Fonction POST pour traiter les soumissions du formulaire de contact
 export async function POST(request: NextRequest) {
@@ -16,39 +12,30 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 })
     }
 
-    // Envoi de l'email au propriétaire du site
-    await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'aboubacarsdk22@gmail.com',
-      subject: `Nouveau message de contact: ${subject}`,
-      html: `
-        <h2>Nouveau message de contact</h2>
-        <p><strong>Nom:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Sujet:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `
+    // Envoi à Formspree
+    const formspreeResponse = await fetch('https://formspree.io/f/aboubacarsdk22@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+        _subject: `Nouveau message de contact: ${subject}`
+      })
     })
 
-    // Envoi de l'email de confirmation au visiteur
-    await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: email,
-      subject: 'Nous avons reçu votre message',
-      html: `
-        <h2>Merci de nous avoir contactés!</h2>
-        <p>Bonjour ${name},</p>
-        <p>Nous avons bien reçu votre message et nous vous recontacterons très bientôt.</p>
-        <p><strong>Centre Sportif Bouba & Mane</strong></p>
-        <p>🌟 On Crée Des Talents 🌟</p>
-      `
-    })
+    if (!formspreeResponse.ok) {
+      throw new Error('Erreur lors de l\'envoi avec Formspree')
+    }
 
     // Réponse de succès
     return NextResponse.json({ success: true, message: 'Message envoyé avec succès' })
   } catch (error) {
-    console.error('Erreur lors de l\'envoi du email:', error)
+    console.error('Erreur lors de l\'envoi du message:', error)
     // Gestion des erreurs avec réponse d'erreur
     return NextResponse.json({ error: 'Erreur lors de l\'envoi du message' }, { status: 500 })
   }
