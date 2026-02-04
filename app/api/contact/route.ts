@@ -12,8 +12,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 })
     }
 
-    // Envoi à Formspree
-    const formspreeResponse = await fetch('https://formspree.io/f/aboubacarsdk22@gmail.com', {
+    // Envoi à Formspree (endpoint pour aboubacarsdk22@gmail.com)
+    const formspreeResponse = await fetch('https://formspree.io/f/mgvwqzny', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,12 +23,13 @@ export async function POST(request: NextRequest) {
         name,
         email,
         subject,
-        message,
-        _subject: `Nouveau message de contact: ${subject}`
+        message
       })
     })
 
     if (!formspreeResponse.ok) {
+      const error = await formspreeResponse.text()
+      console.error('Erreur Formspree:', error)
       throw new Error('Erreur lors de l\'envoi avec Formspree')
     }
 
