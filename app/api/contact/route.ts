@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
+
+// Initialisation du client Resend
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Fonction POST pour traiter les soumissions du formulaire de contact
 export async function POST(request: NextRequest) {
@@ -13,18 +16,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 })
     }
 
-    // Configuration du transporteur Gmail
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD
-      }
-    })
-
-    // Contenu de l'email à envoyer au propriétaire du site
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
+    // Envoi de l'email au propriétaire du site
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: 'aboubacarsdk22@gmail.com',
       subject: `Nouveau message de contact: ${subject}`,
       html: `
@@ -35,14 +29,11 @@ export async function POST(request: NextRequest) {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `
-    }
+    })
 
-    // Envoi de l'email
-    await transporter.sendMail(mailOptions)
-
-    // Email de confirmation au visiteur
-    const confirmationMail = {
-      from: process.env.GMAIL_USER,
+    // Envoi de l'email de confirmation au visiteur
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
       to: email,
       subject: 'Nous avons reçu votre message',
       html: `
@@ -52,10 +43,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Centre Sportif Bouba & Mane</strong></p>
         <p>🌟 On Crée Des Talents 🌟</p>
       `
-    }
-
-    // Envoi de l'email de confirmation
-    await transporter.sendMail(confirmationMail)
+    })
 
     // Réponse de succès
     return NextResponse.json({ success: true, message: 'Message envoyé avec succès' })
