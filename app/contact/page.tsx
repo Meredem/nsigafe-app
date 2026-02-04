@@ -10,25 +10,40 @@ export default function Contact() {
     message: ''
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    setError('')
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setLoading(true)
+    setError('')
+    
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       })
+      
+      const data = await response.json()
+      
       if (response.ok) {
         setSubmitted(true)
         setFormData({ name: '', email: '', subject: '', message: '' })
+        setTimeout(() => setSubmitted(false), 5000)
+      } else {
+        setError(data.error || 'Une erreur est survenue')
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error)
+      setError('Erreur de connexion. Veuillez réessayer.')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -96,13 +111,21 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Formulaire de Contact */}
           {submitted ? (
             <div className="bg-gradient-to-r from-green-100 to-green-50 border-2 border-green-400 text-green-800 px-8 py-6 rounded-2xl text-center shadow-lg mb-8">
               <p className="text-2xl font-bold">✅ Merci pour votre message !</p>
               <p className="mt-2">Nous vous répondrons très bientôt.</p>
             </div>
-          ) : (
+          ) : null}
+          
+          {error && (
+            <div className="bg-gradient-to-r from-red-100 to-red-50 border-2 border-red-400 text-red-800 px-8 py-6 rounded-2xl text-center shadow-lg mb-8">
+              <p className="text-2xl font-bold">❌ Erreur</p>
+              <p className="mt-2">{error}</p>
+            </div>
+          )}
+          
+          {!submitted ? (
             <div className="bg-white p-8 rounded-2xl shadow-xl">
               <h3 className="text-2xl font-bold mb-8 text-gray-800">Envoyez-nous un Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -116,7 +139,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                      disabled={loading}
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 disabled:bg-gray-100"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -129,7 +153,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                      disabled={loading}
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 disabled:bg-gray-100"
                       placeholder="Votre email"
                     />
                   </div>
@@ -143,7 +168,8 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                    disabled={loading}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 disabled:bg-gray-100"
                     placeholder="Sujet de votre message"
                   />
                 </div>
@@ -155,20 +181,22 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={loading}
                     rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300"
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition duration-300 disabled:bg-gray-100"
                     placeholder="Votre message..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+                  disabled={loading}
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  📤 Envoyer le Message
+                  {loading ? '⏳ Envoi en cours...' : '📤 Envoyer le Message'}
                 </button>
               </form>
             </div>
-          )}
+          ) : null}
         </div>
       </main>
     </div>
