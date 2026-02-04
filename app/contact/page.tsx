@@ -24,24 +24,19 @@ export default function Contact() {
     setError('')
     
     try {
-      // Envoi direct via GetForm.io avec FormData
-      const formDataToSend = new FormData()
-      formDataToSend.append('name', formData.name)
-      formDataToSend.append('email', formData.email)
-      formDataToSend.append('subject', formData.subject)
-      formDataToSend.append('message', formData.message)
-      
-      const response = await fetch('https://getform.io/f/bqonvxqb', {
+      // Envoi via FormSubmit.co
+      const response = await fetch('https://formsubmit.co/aboubacarsdk22@gmail.com', {
         method: 'POST',
-        body: formDataToSend
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
       })
-      
-      // Envoi aussi à notre API pour ntfy.sh
-      fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      }).catch(() => {})
       
       if (response.ok) {
         setSubmitted(true)
