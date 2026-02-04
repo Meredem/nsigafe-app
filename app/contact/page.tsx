@@ -24,20 +24,31 @@ export default function Contact() {
     setError('')
     
     try {
-      const response = await fetch('/api/contact', {
+      // Envoi direct via GetForm.io (envoie à l'email configuré)
+      const response = await fetch('https://getform.io/f/bqonvxqb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      })
+      
+      // Envoi aussi à notre API pour ntfy.sh
+      fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
-      })
-      
-      const data = await response.json()
+      }).catch(() => {})
       
       if (response.ok) {
         setSubmitted(true)
         setFormData({ name: '', email: '', subject: '', message: '' })
         setTimeout(() => setSubmitted(false), 5000)
       } else {
-        setError(data.error || 'Une erreur est survenue')
+        setError('Une erreur est survenue')
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error)
