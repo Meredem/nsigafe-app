@@ -24,16 +24,16 @@ export default function Contact() {
     setError('')
     
     try {
-      // Envoi direct via GetForm.io (envoie à l'email configuré)
+      // Envoi direct via GetForm.io avec FormData
+      const formDataToSend = new FormData()
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('email', formData.email)
+      formDataToSend.append('subject', formData.subject)
+      formDataToSend.append('message', formData.message)
+      
       const response = await fetch('https://getform.io/f/bqonvxqb', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message
-        })
+        body: formDataToSend
       })
       
       // Envoi aussi à notre API pour ntfy.sh
