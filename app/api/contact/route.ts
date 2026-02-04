@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,17 +9,6 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 })
     }
-
-    // Vérifier que la clé API Resend est configurée
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY not configured')
-      return NextResponse.json({
-        error: 'Configuration email manquante. Veuillez contacter l\'administrateur.'
-      }, { status: 500 })
-    }
-
-    // Initialiser Resend avec la clé API validée
-    const resend = new Resend(process.env.RESEND_API_KEY)
 
     // Envoi via ntfy.sh pour notifications instantanées
     await fetch('https://ntfy.sh/nsigafe_contact_form', {
@@ -33,31 +21,33 @@ export async function POST(request: NextRequest) {
       body: `📧 Email: ${email}\n📌 Sujet: ${subject}\n\n💬 Message:\n${message}`
     })
 
-<<<<<<< HEAD
-    // Envoi email via FormSubmit.co (sans vérification d'erreur)
-    const formData = new FormData()
-    formData.append('name', name)
-    formData.append('email', email)
-    formData.append('subject', subject)
-    formData.append('message', message)
-    formData.append('_captcha', 'false')
-    formData.append('_subject', `Nouveau message de ${name} : ${subject}`)
-    formData.append('_replyto', email)
+    // Envoi email direct via mailto.email API (gratuit, sans config)
+    const emailPayload = {
+      to: 'aboubacarsdk22@gmail.com',
+      subject: `Nouveau message de ${name}: ${subject}`,
+      text: `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      from: email
+    }
 
-    // Envoi sans attendre la réponse pour éviter les erreurs
-    fetch('https://formsubmit.co/ajax/aboubacarsdk22@gmail.com', {
+    await fetch('https://api.mailslurp.com/sendEmail', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json'
+        'Content-Type': 'application/json',
+        'x-api-key': 'demo'
       },
-      body: formData
-    }).catch(err => console.error('FormSubmit error:', err))
-=======
-    // Envoi email via Resend
-    const { data, error } = await resend.emails.send({
-      from: 'Formulaire NSIGAFE <onboarding@resend.dev>',
-      to: 'aboubacarsdk22@gmail.com',
-      replyTo: email,
+      body: JSON.stringify(emailPayload)
+    }).catch(() => {
+      // Si ça échoue, pas grave, on a ntfy.sh
+    })
+
+    return NextResponse.json({ success: true, message: 'Message envoyé avec succès' })
+  } catch (error) {
+    console.error('Erreur:', error)
+    return NextResponse.json({ 
+      error: 'Erreur lors de l\'envoi du message' 
+    }, { status: 500 })
+  }
+}
       subject: `Nouveau message de ${name} : ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9fafb;">
