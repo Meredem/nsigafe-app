@@ -75,39 +75,33 @@ export default function Home() {
         <section className="mb-20">
           <h3 className="text-4xl font-black text-center mb-12 text-white">🔥 Nos Moments Forts</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <button
-              type="button"
-              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block w-full text-left"
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
               onClick={() => setSelectedImage('/foot1.jpg')}
-              aria-label="Agrandir la photo"
             >
               <img src="/foot1.jpg" alt="Match" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
                 <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">🏆 Victoire • Cliquez pour agrandir</span>
               </div>
-            </button>
-            <button
-              type="button"
-              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block w-full text-left"
+            </div>
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
               onClick={() => setSelectedImage('/foot2.jpg')}
-              aria-label="Agrandir la photo"
             >
               <img src="/foot2.jpg" alt="Équipe" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
                 <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">👥 Solidarité • Cliquez pour agrandir</span>
               </div>
-            </button>
-            <button
-              type="button"
-              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block w-full text-left"
+            </div>
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
               onClick={() => setSelectedImage('/foot3.jpg')}
-              aria-label="Agrandir la photo"
             >
               <img src="/foot3.jpg" alt="Entraînement" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
                 <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">💪 Entraînement • Cliquez pour agrandir</span>
               </div>
-            </button>
+            </div>
           </div>
         </section>
 
@@ -156,12 +150,10 @@ export default function Home() {
               { nom: 'Daouda Sylla', poste: 'Milieu Offensif', photo: '/Daouda sylla mileu offensif.jpeg' },
               { nom: 'Youssouf Touré', poste: 'Défenseur', photo: '/Youssouf touré défenseur.jpeg' }
             ].map((joueur, i) => (
-              <button
-                key={i}
-                type="button"
-                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer block w-full text-left"
+              <div 
+                key={i} 
+                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer"
                 onClick={() => setSelectedImage(joueur.photo)}
-                aria-label={`Agrandir la photo de ${joueur.nom}`}
               >
                 <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
                   <img 
@@ -174,7 +166,7 @@ export default function Home() {
                   <p className="text-xl font-bold mb-1">{joueur.nom}</p>
                   <p className="text-sm text-yellow-300">{joueur.poste}</p>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </section>
@@ -270,7 +262,7 @@ export default function Home() {
       {/* MODAL LIGHTBOX pour afficher les images en grand */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-[9999] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-7xl max-h-full">
