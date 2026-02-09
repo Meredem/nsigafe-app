@@ -262,12 +262,13 @@ export default function Home() {
       {/* MODAL LIGHTBOX pour afficher les images en grand */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center p-4 cursor-pointer"
+          style={{ zIndex: 999999 }}
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-7xl max-h-full">
+          <div className="relative max-w-7xl max-h-full" onClick={(e) => e.stopPropagation()}>
             <button 
-              className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-500 z-10"
+              className="absolute -top-12 right-0 text-white text-5xl font-bold hover:text-red-500 bg-red-600 hover:bg-red-700 rounded-full w-14 h-14 flex items-center justify-center"
               onClick={() => setSelectedImage(null)}
             >
               ✕
@@ -275,8 +276,7 @@ export default function Home() {
             <img 
               src={selectedImage} 
               alt="Image agrandie"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
           </div>
         </div>
