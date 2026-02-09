@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 export default function Home() {
   const [stats, setStats] = useState({ wins: 0, goals: 0, fans: 0 })
   const [activeTab, setActiveTab] = useState(0)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   useEffect(() => {
     // Animation des compteurs
@@ -74,22 +75,31 @@ export default function Home() {
         <section className="mb-20">
           <h3 className="text-4xl font-black text-center mb-12 text-white">🔥 Nos Moments Forts</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="group relative overflow-hidden rounded-2xl shadow-2xl h-96">
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
+              onClick={() => setSelectedImage('/foot1.jpg')}
+            >
               <img src="/foot1.jpg" alt="Match" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
-                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">🏆 Victoire</span>
+                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">🏆 Victoire • Cliquez pour agrandir</span>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-2xl shadow-2xl h-96">
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
+              onClick={() => setSelectedImage('/foot2.jpg')}
+            >
               <img src="/foot2.jpg" alt="Équipe" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
-                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">👥 Solidarité</span>
+                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">👥 Solidarité • Cliquez pour agrandir</span>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-2xl shadow-2xl h-96">
+            <div 
+              className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer"
+              onClick={() => setSelectedImage('/foot3.jpg')}
+            >
               <img src="/foot3.jpg" alt="Entraînement" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
-                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">💪 Entraînement</span>
+                <span className="text-white text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity">💪 Entraînement • Cliquez pour agrandir</span>
               </div>
             </div>
           </div>
@@ -140,7 +150,11 @@ export default function Home() {
               { nom: 'Daouda Sylla', poste: 'Milieu Offensif', photo: '/Daouda sylla mileu offensif.jpeg' },
               { nom: 'Youssouf Touré', poste: 'Défenseur', photo: '/Youssouf touré défenseur.jpeg' }
             ].map((joueur, i) => (
-              <div key={i} className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2">
+              <div 
+                key={i} 
+                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer"
+                onClick={() => setSelectedImage(joueur.photo)}
+              >
                 <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
                   <img 
                     src={joueur.photo} 
@@ -244,6 +258,29 @@ export default function Home() {
         </section>
       </main>
       </div>
+
+      {/* MODAL LIGHTBOX pour afficher les images en grand */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button 
+              className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-500 z-10"
+              onClick={() => setSelectedImage(null)}
+            >
+              ✕
+            </button>
+            <img 
+              src={selectedImage} 
+              alt="Image agrandie"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

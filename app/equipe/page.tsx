@@ -1,4 +1,10 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Equipe() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  
   const joueurs = [
     { nom: 'Karamba Dambakaté', poste: 'Attaquant', photo: '/karamba dambakaté attaquant.jpeg' },
     { nom: 'Alpha Ibrahima Sow', poste: 'Défenseur', photo: '/Alpha ibrahima sow défenseur.jpeg' },
@@ -23,7 +29,11 @@ export default function Equipe() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {joueurs.map((joueur, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div 
+              key={index} 
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
+              onClick={() => setSelectedImage(joueur.photo)}
+            >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
                 <img 
                   src={joueur.photo} 
@@ -50,6 +60,29 @@ export default function Equipe() {
           </div>
         </div>
       </main>
+
+      {/* MODAL LIGHTBOX pour afficher les images en grand */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button 
+              className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-500 z-10"
+              onClick={() => setSelectedImage(null)}
+            >
+              ✕
+            </button>
+            <img 
+              src={selectedImage} 
+              alt="Image agrandie"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
