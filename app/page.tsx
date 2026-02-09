@@ -125,20 +125,30 @@ export default function Home() {
         {/* JOUEURS VEDETTES */}
         <section className="mb-20">
           <h3 className="text-4xl font-black text-center text-white mb-12">⭐ Nos Joueurs d'Exception</h3>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { nom: 'Mohamed Camara', numero: 1, poste: 'Pré-sélectionné', emoji: '⭐' },
-              { nom: 'Daouda Sylla', numero: 2, poste: 'Pré-sélectionné', emoji: '⭐' },
-              { nom: 'Moustapha Fofana', numero: 3, poste: 'Pré-sélectionné', emoji: '⭐' },
-              { nom: 'Wahab Keita', numero: 4, poste: 'Pré-sélectionné', emoji: '⭐' },
-              { nom: 'Djibril Toure', numero: 5, poste: 'Pré-sélectionné', emoji: '⭐' }
+              { nom: 'Karamba Dambakaté', poste: 'Attaquant', photo: '/karamba dambakaté attaquant.jpeg' },
+              { nom: 'Alpha Ibrahima Sow', poste: 'Défenseur', photo: '/Alpha ibrahima sow défenseur.jpeg' },
+              { nom: 'Mamadi Camara', poste: 'Milieu', photo: '/Mamadi camara milieu.jpeg' },
+              { nom: 'Ousmane Dambakaté', poste: 'Défenseur', photo: '/Ousmane dambakaté défenseur.jpeg' },
+              { nom: 'Aliou Camara', poste: 'Défenseur', photo: '/Aliou camara défenseur.jpeg' },
+              { nom: 'Djibril Touré', poste: 'Attaquant', photo: '/Djibril Touré attaquant.jpeg' },
+              { nom: 'Sékou Camara', poste: 'Attaquant', photo: '/sékou camara attaquant.jpeg' },
+              { nom: 'Moustapha Fofana', poste: 'Attaquant Excentré', photo: '/Moustapha fofana attaquant excentré.jpeg' },
+              { nom: 'Mohamed Camara', poste: 'Milieu Polyvalent', photo: '/Mohamed camara milieu polyvalent.jpeg' },
+              { nom: 'Abdoul Wahab Keita', poste: 'Milieu Polyvalent', photo: '/Abdoul wahab keita milieu polyvalent.jpeg' },
+              { nom: 'Daouda Sylla', poste: 'Milieu Offensif', photo: '/Daouda sylla mileu offensif.jpeg' },
+              { nom: 'Youssouf Touré', poste: 'Défenseur', photo: '/Youssouf touré défenseur.jpeg' }
             ].map((joueur, i) => (
               <div key={i} className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2">
-                <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-6xl">
-                  {joueur.emoji}
+                <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
+                  <img 
+                    src={joueur.photo} 
+                    alt={joueur.nom}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6 text-white text-center">
-                  <p className="text-3xl font-black">{joueur.numero}</p>
                   <p className="text-xl font-bold mb-1">{joueur.nom}</p>
                   <p className="text-sm text-yellow-300">{joueur.poste}</p>
                 </div>
