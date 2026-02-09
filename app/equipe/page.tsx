@@ -32,8 +32,9 @@ export default function Equipe() {
             <a 
               key={index} 
               href={joueur.photo}
+              target="_blank"
+              rel="noreferrer"
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage(joueur.photo) }}
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
                 <img 

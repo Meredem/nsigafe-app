@@ -43,8 +43,9 @@ export default function Galerie() {
               <a 
                 key={index} 
                 href={image.src}
+                target="_blank"
+                rel="noreferrer"
                 className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-                onClick={(e) => { e.preventDefault(); setSelectedImage(image.src) }}
               >
                 <img src={image.src} alt={image.alt} className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
@@ -63,8 +64,9 @@ export default function Galerie() {
               <a 
                 key={index} 
                 href={image.src}
+                target="_blank"
+                rel="noreferrer"
                 className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-                onClick={(e) => { e.preventDefault(); setSelectedImage(image.src) }}
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
@@ -81,8 +83,9 @@ export default function Galerie() {
           <div className="grid md:grid-cols-3 gap-8">
             <a 
               href="/photo1.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/photo1.jpg') }}
             >
               <img src="/photo1.jpg" alt="Match - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
@@ -91,8 +94,9 @@ export default function Galerie() {
             </a>
             <a 
               href="/photo2.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/photo2.jpg') }}
             >
               <img src="/photo2.jpg" alt="Équipe - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
@@ -101,8 +105,9 @@ export default function Galerie() {
             </a>
             <a 
               href="/photo3.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/photo3.jpg') }}
             >
               <img src="/photo3.jpg" alt="Entraînement - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
@@ -111,8 +116,9 @@ export default function Galerie() {
             </a>
             <a 
               href="/photo4.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/photo4.jpg') }}
             >
               <img src="/photo4.jpg" alt="Moment fort - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
@@ -130,8 +136,9 @@ export default function Galerie() {
               <a 
                 key={index + 9} 
                 href={image.src}
+                target="_blank"
+                rel="noreferrer"
                 className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
-                onClick={(e) => { e.preventDefault(); setSelectedImage(image.src) }}
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">

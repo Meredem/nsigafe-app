@@ -77,8 +77,9 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <a 
               href="/foot1.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/foot1.jpg') }}
             >
               <img src="/foot1.jpg" alt="Match" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
@@ -87,8 +88,9 @@ export default function Home() {
             </a>
             <a 
               href="/foot2.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/foot2.jpg') }}
             >
               <img src="/foot2.jpg" alt="Équipe" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
@@ -97,8 +99,9 @@ export default function Home() {
             </a>
             <a 
               href="/foot3.jpg"
+              target="_blank"
+              rel="noreferrer"
               className="group relative overflow-hidden rounded-2xl shadow-2xl h-96 cursor-pointer block"
-              onClick={(e) => { e.preventDefault(); setSelectedImage('/foot3.jpg') }}
             >
               <img src="/foot3.jpg" alt="Entraînement" className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
@@ -156,8 +159,9 @@ export default function Home() {
               <a 
                 key={i}
                 href={joueur.photo}
+                target="_blank"
+                rel="noreferrer"
                 className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer block"
-                onClick={(e) => { e.preventDefault(); setSelectedImage(joueur.photo) }}
               >
                 <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
                   <img 
