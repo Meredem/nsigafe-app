@@ -1,9 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-
 export default function Galerie() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
   
   const images = [
     { src: '/centre1.jpg', alt: 'Terrain d\'entraînement principal' },
@@ -40,18 +37,15 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-orange-900">⚽ Centre Sportif Bouba & Mane</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {images.slice(6, 9).map((image, index) => (
-              <button
+              <div
                 key={index}
-                type="button"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-                onClick={() => setSelectedImage(image.src)}
-                aria-label="Agrandir la photo"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>
@@ -61,18 +55,15 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-green-900">🏟️ Notre Centre d'Entraînement</h3>
           <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
             {images.slice(0, 6).map((image, index) => (
-              <button
+              <div
                 key={index}
-                type="button"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-                onClick={() => setSelectedImage(image.src)}
-                aria-label="Agrandir la photo"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>
@@ -81,50 +72,30 @@ export default function Galerie() {
         <div className="mb-20 bg-gradient-to-r from-red-50 to-yellow-50 p-8 rounded-3xl border-4 border-red-400">
           <h3 className="text-4xl font-bold mb-8 text-center text-red-900">🔥 Nouveaux Moments Forts 2026</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <button
-              type="button"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-              onClick={() => setSelectedImage('/photo1.jpg')}
-              aria-label="Agrandir la photo"
-            >
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
               <img src="/photo1.jpg" alt="Match - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Match - Photo nouvelle</p>
               </div>
-            </button>
-            <button
-              type="button"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-              onClick={() => setSelectedImage('/photo2.jpg')}
-              aria-label="Agrandir la photo"
-            >
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
               <img src="/photo2.jpg" alt="Équipe - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Équipe - Photo nouvelle</p>
               </div>
-            </button>
-            <button
-              type="button"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-              onClick={() => setSelectedImage('/photo3.jpg')}
-              aria-label="Agrandir la photo"
-            >
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
               <img src="/photo3.jpg" alt="Entraînement - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Entraînement - Photo nouvelle</p>
               </div>
-            </button>
-            <button
-              type="button"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-              onClick={() => setSelectedImage('/photo4.jpg')}
-              aria-label="Agrandir la photo"
-            >
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
               <img src="/photo4.jpg" alt="Moment fort - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Moment fort - Photo nouvelle</p>
               </div>
-            </button>
+            </div>
           </div>
         </div>
 
@@ -133,45 +104,19 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-purple-900">🎯 Événements et Matchs</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {images.slice(9).map((image, index) => (
-              <button
+              <div
                 key={index + 9}
-                type="button"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
-                onClick={() => setSelectedImage(image.src)}
-                aria-label="Agrandir la photo"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>
       </main>
-
-      {/* MODAL LIGHTBOX pour afficher les images en grand */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-[9999] flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-7xl max-h-full">
-            <button 
-              className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-500 z-10"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Image agrandie"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }

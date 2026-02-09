@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 export default function Home() {
   const [stats, setStats] = useState({ wins: 0, goals: 0, fans: 0 })
   const [activeTab, setActiveTab] = useState(0)
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   useEffect(() => {
     // Animation des compteurs
@@ -152,8 +151,7 @@ export default function Home() {
             ].map((joueur, i) => (
               <div 
                 key={i} 
-                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer"
-                onClick={() => setSelectedImage(joueur.photo)}
+                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2"
               >
                 <div className="aspect-square bg-gradient-to-br from-green-600 to-green-800 overflow-hidden">
                   <img 
@@ -258,29 +256,6 @@ export default function Home() {
         </section>
       </main>
       </div>
-
-      {/* MODAL LIGHTBOX pour afficher les images en grand */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center p-4 cursor-pointer"
-          style={{ zIndex: 999999 }}
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-7xl max-h-full" onClick={(e) => e.stopPropagation()}>
-            <button 
-              className="absolute -top-12 right-0 text-white text-5xl font-bold hover:text-red-500 bg-red-600 hover:bg-red-700 rounded-full w-14 h-14 flex items-center justify-center"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Image agrandie"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }

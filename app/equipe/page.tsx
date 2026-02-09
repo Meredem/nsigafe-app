@@ -1,9 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-
 export default function Equipe() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
   
   const joueurs = [
     { nom: 'Karamba Dambakaté', poste: 'Attaquant', photo: '/karamba dambakaté attaquant.jpeg' },
@@ -29,12 +26,9 @@ export default function Equipe() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {joueurs.map((joueur, index) => (
-            <button
+            <div
               key={index}
-              type="button"
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block w-full text-left"
-              onClick={() => setSelectedImage(joueur.photo)}
-              aria-label={`Agrandir la photo de ${joueur.nom}`}
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
                 <img 
@@ -45,7 +39,7 @@ export default function Equipe() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-center text-gray-800">{joueur.nom}</h3>
               <p className="text-green-600 font-semibold text-center">{joueur.poste}</p>
-            </button>
+            </div>
           ))}
         </div>
         <div className="mt-12 bg-gradient-to-r from-green-500 to-blue-500 text-white p-8 rounded-2xl shadow-xl">
@@ -62,29 +56,6 @@ export default function Equipe() {
           </div>
         </div>
       </main>
-
-      {/* MODAL LIGHTBOX pour afficher les images en grand */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-90 z-[9999] flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-7xl max-h-full">
-            <button 
-              className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-500 z-10"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕
-            </button>
-            <img 
-              src={selectedImage} 
-              alt="Image agrandie"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      )}
     </div>
   )
 }
