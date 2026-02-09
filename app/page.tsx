@@ -253,12 +253,11 @@ export default function Home() {
             <Link href="/galerie" className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
               <p className="text-3xl mb-2">🖼️</p>
               <p className="text-xl font-bold">Galerie Complète</p>
-              <a 
-                key={i} 
-                href={joueur.photo}
-                className="group bg-gradient-to-br from-green-800 to-green-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/50 transition-all hover:-translate-y-2 cursor-pointer block"
-                onClick={(e) => { e.preventDefault(); setSelectedImage(joueur.photo) }}
-              >
+            </Link>
+            <Link href="/matchs" className="bg-gradient-to-br from-yellow-500 to-yellow-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
+              <p className="text-3xl mb-2">📅</p>
+              <p className="text-xl font-bold">Calendrier</p>
+            </Link>
             <Link href="/equipe" className="bg-gradient-to-br from-pink-500 to-pink-600 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2">
               <p className="text-3xl mb-2">👥</p>
               <p className="text-xl font-bold">Notre Équipe</p>
@@ -270,7 +269,7 @@ export default function Home() {
 
       {/* MODAL LIGHTBOX pour afficher les images en grand */}
       {selectedImage && (
-              </a>
+        <div 
           className="fixed inset-0 bg-black bg-opacity-90 z-[9999] flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
