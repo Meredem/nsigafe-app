@@ -99,6 +99,90 @@ export default function Galerie() {
           </div>
         </div>
 
+        {/* Section Nos Joueurs - NOUVELLES PHOTOS */}
+        <div className="mb-20 bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-3xl border-4 border-green-400">
+          <h3 className="text-4xl font-bold mb-8 text-center text-green-900">⭐ Nos Joueurs d'Exception</h3>
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/karamba dambakaté attaquant.jpeg" alt="Karamba Dambakaté - Attaquant" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Karamba Dambakaté</p>
+                <p className="text-center text-sm text-green-600">Attaquant</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Alpha ibrahima sow défenseur.jpeg" alt="Alpha Ibrahima Sow - Défenseur" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Alpha Ibrahima Sow</p>
+                <p className="text-center text-sm text-green-600">Défenseur</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Mamadi camara milieu.jpeg" alt="Mamadi Camara - Milieu" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Mamadi Camara</p>
+                <p className="text-center text-sm text-green-600">Milieu</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Ousmane dambakaté défenseur.jpeg" alt="Ousmane Dambakaté - Défenseur" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Ousmane Dambakaté</p>
+                <p className="text-center text-sm text-green-600">Défenseur</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Aliou camara défenseur.jpeg" alt="Aliou Camara - Défenseur" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Aliou Camara</p>
+                <p className="text-center text-sm text-green-600">Défenseur</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Djibril Touré attaquant.jpeg" alt="Djibril Touré - Attaquant" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Djibril Touré</p>
+                <p className="text-center text-sm text-green-600">Attaquant</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/sékou camara attaquant.jpeg" alt="Sékou Camara - Attaquant" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Sékou Camara</p>
+                <p className="text-center text-sm text-green-600">Attaquant</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Moustapha fofana attaquant excentré.jpeg" alt="Moustapha Fofana - Attaquant Excentré" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Moustapha Fofana</p>
+                <p className="text-center text-sm text-green-600">Attaquant Excentré</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Mohamed camara milieu polyvalent.jpeg" alt="Mohamed Camara - Milieu Polyvalent" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Mohamed Camara</p>
+                <p className="text-center text-sm text-green-600">Milieu Polyvalent</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Abdoul wahab keita milieu polyvalent.jpeg" alt="Abdoul Wahab Keita - Milieu Polyvalent" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Abdoul Wahab Keita</p>
+                <p className="text-center text-sm text-green-600">Milieu Polyvalent</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img src="/Daouda sylla mileu offensif.jpeg" alt="Daouda Sylla - Milieu Offensif" className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-4 bg-white">
+                <p className="text-center font-bold text-gray-800">Daouda Sylla</p>
+                <p className="text-center text-sm text-green-600">Milieu Offensif</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Section Événements et Matchs */}
         <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-3xl">
           <h3 className="text-4xl font-bold mb-8 text-center text-purple-900">🎯 Événements et Matchs</h3>
