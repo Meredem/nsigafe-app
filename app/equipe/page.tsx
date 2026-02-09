@@ -29,12 +29,12 @@ export default function Equipe() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {joueurs.map((joueur, index) => (
-            <a 
-              key={index} 
-              href={joueur.photo}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block"
+            <button
+              key={index}
+              type="button"
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer block w-full text-left"
+              onClick={() => setSelectedImage(joueur.photo)}
+              aria-label={`Agrandir la photo de ${joueur.nom}`}
             >
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
                 <img 
@@ -45,7 +45,7 @@ export default function Equipe() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-center text-gray-800">{joueur.nom}</h3>
               <p className="text-green-600 font-semibold text-center">{joueur.poste}</p>
-            </a>
+            </button>
           ))}
         </div>
         <div className="mt-12 bg-gradient-to-r from-green-500 to-blue-500 text-white p-8 rounded-2xl shadow-xl">

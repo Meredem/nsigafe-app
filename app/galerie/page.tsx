@@ -40,18 +40,18 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-orange-900">⚽ Centre Sportif Bouba & Mane</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {images.slice(6, 9).map((image, index) => (
-              <a 
-                key={index} 
-                href={image.src}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+              <button
+                key={index}
+                type="button"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+                onClick={() => setSelectedImage(image.src)}
+                aria-label="Agrandir la photo"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -61,18 +61,18 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-green-900">🏟️ Notre Centre d'Entraînement</h3>
           <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
             {images.slice(0, 6).map((image, index) => (
-              <a 
-                key={index} 
-                href={image.src}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+              <button
+                key={index}
+                type="button"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+                onClick={() => setSelectedImage(image.src)}
+                aria-label="Agrandir la photo"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -81,50 +81,50 @@ export default function Galerie() {
         <div className="mb-20 bg-gradient-to-r from-red-50 to-yellow-50 p-8 rounded-3xl border-4 border-red-400">
           <h3 className="text-4xl font-bold mb-8 text-center text-red-900">🔥 Nouveaux Moments Forts 2026</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <a 
-              href="/photo1.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+            <button
+              type="button"
+              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+              onClick={() => setSelectedImage('/photo1.jpg')}
+              aria-label="Agrandir la photo"
             >
               <img src="/photo1.jpg" alt="Match - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Match - Photo nouvelle</p>
               </div>
-            </a>
-            <a 
-              href="/photo2.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+            </button>
+            <button
+              type="button"
+              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+              onClick={() => setSelectedImage('/photo2.jpg')}
+              aria-label="Agrandir la photo"
             >
               <img src="/photo2.jpg" alt="Équipe - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Équipe - Photo nouvelle</p>
               </div>
-            </a>
-            <a 
-              href="/photo3.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+            </button>
+            <button
+              type="button"
+              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+              onClick={() => setSelectedImage('/photo3.jpg')}
+              aria-label="Agrandir la photo"
             >
               <img src="/photo3.jpg" alt="Entraînement - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Entraînement - Photo nouvelle</p>
               </div>
-            </a>
-            <a 
-              href="/photo4.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+            </button>
+            <button
+              type="button"
+              className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+              onClick={() => setSelectedImage('/photo4.jpg')}
+              aria-label="Agrandir la photo"
             >
               <img src="/photo4.jpg" alt="Moment fort - Photo nouvelle" className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="p-4 bg-white">
                 <p className="text-center font-semibold text-gray-700">Moment fort - Photo nouvelle</p>
               </div>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -133,18 +133,18 @@ export default function Galerie() {
           <h3 className="text-4xl font-bold mb-8 text-center text-purple-900">🎯 Événements et Matchs</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {images.slice(9).map((image, index) => (
-              <a 
-                key={index + 9} 
-                href={image.src}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+              <button
+                key={index + 9}
+                type="button"
+                className="group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer block w-full text-left"
+                onClick={() => setSelectedImage(image.src)}
+                aria-label="Agrandir la photo"
               >
                 <img src={image.src} alt={image.alt} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300" />
                 <div className="p-4 bg-white">
                   <p className="text-center font-semibold text-gray-700">{image.alt}</p>
                 </div>
-              </a>
+              </button>
             ))}
           </div>
         </div>
